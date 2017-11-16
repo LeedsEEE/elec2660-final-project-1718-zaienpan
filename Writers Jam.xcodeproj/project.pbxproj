@@ -15,6 +15,9 @@
 		A3E0DB071FBC8D82003E68A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E0DB051FBC8D82003E68A5 /* LaunchScreen.storyboard */; };
 		A3E0DB121FBC8D82003E68A5 /* Writers_JamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DB111FBC8D82003E68A5 /* Writers_JamTests.m */; };
 		A3E0DB1D1FBC8D82003E68A5 /* Writers_JamUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DB1C1FBC8D82003E68A5 /* Writers_JamUITests.m */; };
+		A3E0DB2C1FBDD3D9003E68A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E0DB2B1FBDD3D9003E68A5 /* AVFoundation.framework */; };
+		A3E0DB2E1FBDDC06003E68A5 /* LaunchScreenImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E0DB2D1FBDDC06003E68A5 /* LaunchScreenImage.jpg */; };
+		A3E0DB321FBDF3C3003E68A5 /* ChordLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DB311FBDF3C3003E68A5 /* ChordLibrary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		A3E0DB181FBC8D82003E68A5 /* Writers JamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Writers JamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E0DB1C1FBC8D82003E68A5 /* Writers_JamUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Writers_JamUITests.m; sourceTree = "<group>"; };
 		A3E0DB1E1FBC8D82003E68A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3E0DB2B1FBDD3D9003E68A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A3E0DB2D1FBDDC06003E68A5 /* LaunchScreenImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchScreenImage.jpg; sourceTree = "<group>"; };
+		A3E0DB301FBDF3C3003E68A5 /* ChordLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordLibrary.h; sourceTree = "<group>"; };
+		A3E0DB311FBDF3C3003E68A5 /* ChordLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordLibrary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E0DB2C1FBDD3D9003E68A5 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,7 @@
 				A3E0DB101FBC8D82003E68A5 /* Writers JamTests */,
 				A3E0DB1B1FBC8D82003E68A5 /* Writers JamUITests */,
 				A3E0DAF51FBC8D82003E68A5 /* Products */,
+				A3E0DB2A1FBDD3D8003E68A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +115,12 @@
 				A3E0DAFD1FBC8D82003E68A5 /* ViewController.h */,
 				A3E0DAFE1FBC8D82003E68A5 /* ViewController.m */,
 				A3E0DB001FBC8D82003E68A5 /* Main.storyboard */,
+				A3E0DB301FBDF3C3003E68A5 /* ChordLibrary.h */,
+				A3E0DB311FBDF3C3003E68A5 /* ChordLibrary.m */,
 				A3E0DB031FBC8D82003E68A5 /* Assets.xcassets */,
 				A3E0DB051FBC8D82003E68A5 /* LaunchScreen.storyboard */,
 				A3E0DB081FBC8D82003E68A5 /* Info.plist */,
+				A3E0DB2F1FBDDC09003E68A5 /* Images */,
 				A3E0DAF71FBC8D82003E68A5 /* Supporting Files */,
 			);
 			path = "Writers Jam";
@@ -138,6 +150,22 @@
 				A3E0DB1E1FBC8D82003E68A5 /* Info.plist */,
 			);
 			path = "Writers JamUITests";
+			sourceTree = "<group>";
+		};
+		A3E0DB2A1FBDD3D8003E68A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E0DB2B1FBDD3D9003E68A5 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3E0DB2F1FBDDC09003E68A5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A3E0DB2D1FBDDC06003E68A5 /* LaunchScreenImage.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +276,7 @@
 			files = (
 				A3E0DB071FBC8D82003E68A5 /* LaunchScreen.storyboard in Resources */,
 				A3E0DB041FBC8D82003E68A5 /* Assets.xcassets in Resources */,
+				A3E0DB2E1FBDDC06003E68A5 /* LaunchScreenImage.jpg in Resources */,
 				A3E0DB021FBC8D82003E68A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +304,7 @@
 			files = (
 				A3E0DAFF1FBC8D82003E68A5 /* ViewController.m in Sources */,
 				A3E0DAFC1FBC8D82003E68A5 /* AppDelegate.m in Sources */,
+				A3E0DB321FBDF3C3003E68A5 /* ChordLibrary.m in Sources */,
 				A3E0DAF91FBC8D82003E68A5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +537,7 @@
 				A3E0DB231FBC8D82003E68A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3E0DB241FBC8D82003E68A5 /* Build configuration list for PBXNativeTarget "Writers JamTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +546,7 @@
 				A3E0DB261FBC8D82003E68A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3E0DB271FBC8D82003E68A5 /* Build configuration list for PBXNativeTarget "Writers JamUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +555,7 @@
 				A3E0DB291FBC8D82003E68A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
