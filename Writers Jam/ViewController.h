@@ -7,19 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ChordLibrary.h"
 
 @interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 
-@property (weak, nonatomic) IBOutlet UIPickerView *chordPicker;
-@property (strong, nonatomic) NSArray *rootArray;
-@property (strong, nonatomic) NSArray *typeArray;
+@property (strong, nonatomic) IBOutlet UIPickerView *chordPicker;
+@property (strong, nonatomic) NSArray *Cmajor;
+@property (strong, nonatomic) NSString *setKey;
 
-@property (strong, nonatomic) IBOutlet UITextField *Chord1;
-@property (strong, nonatomic) IBOutlet UITextField *Chord2;
-@property (strong, nonatomic) IBOutlet UITextField *Chord3;
-@property (strong, nonatomic) IBOutlet UITextField *Chord4;
+
+@property (strong, nonatomic) IBOutlet UITextField *selectChord1;
+@property (strong, nonatomic) IBOutlet UITextField *selectChord2;
+@property (strong, nonatomic) IBOutlet UITextField *selectChord3;
+@property (strong, nonatomic) IBOutlet UITextField *selectChord4;
 
 
 

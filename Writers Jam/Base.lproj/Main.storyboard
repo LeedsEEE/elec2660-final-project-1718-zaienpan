@@ -70,10 +70,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Chord1" destination="wps-1p-I5B" id="YfY-Rs-KTe"/>
-                        <outlet property="Chord2" destination="Zlc-ZU-8qT" id="v7R-8o-5lv"/>
-                        <outlet property="Chord3" destination="jnn-MR-dyz" id="fRC-YG-hE7"/>
-                        <outlet property="Chord4" destination="B95-U8-q6M" id="0f1-BZ-ris"/>
+                        <outlet property="selectChord1" destination="wps-1p-I5B" id="qvW-6n-Ql3"/>
+                        <outlet property="selectChord2" destination="Zlc-ZU-8qT" id="63B-7t-9Iv"/>
+                        <outlet property="selectChord3" destination="jnn-MR-dyz" id="SuY-ch-i6N"/>
+                        <outlet property="selectChord4" destination="B95-U8-q6M" id="9Uc-tH-gcC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

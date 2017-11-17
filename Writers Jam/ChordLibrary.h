@@ -10,9 +10,6 @@
 
 @interface ChordLibrary : NSObject
 
-@property NSInteger rootNote;
-@property NSInteger chordType;
-@property NSInteger chordExtension;
-
+@property (strong, nonatomic) NSArray *Cmajor;
 
 @end
