@@ -77,6 +77,8 @@ numberOfRowsInComponent:(NSInteger)component{
        inComponent:(NSInteger)component{
     
     NSLog(@"Selected Row %ld", (long)row);
+    
+    //update each textfield with pickerview input
     if (pickerView.tag == 1){
         self.selectChord1.text = _Cmajor[row];
     } else if (pickerView.tag == 2){
@@ -94,5 +96,18 @@ numberOfRowsInComponent:(NSInteger)component{
 - (void)touchesBegan:(NSSet<UITouch *> *)touches
            withEvent:(UIEvent *)event {
     [self.view endEditing:YES];}
+
+- (IBAction)randomPressed:(UIButton *)sender {
+    NSUInteger random = arc4random_uniform(_Cmajor.count);
+    NSUInteger random2 = arc4random_uniform(_Cmajor.count);
+    NSUInteger random3 = arc4random_uniform(_Cmajor.count);
+    NSUInteger random4 = arc4random_uniform(_Cmajor.count);
+    [_chordPicker selectRow:random inComponent:0 animated:YES];
+
+    self.selectChord1.text = _Cmajor[random];
+    self.selectChord2.text = _Cmajor[random2];
+    self.selectChord3.text = _Cmajor[random3];
+    self.selectChord4.text = _Cmajor[random4];
+    }
 
 @end

@@ -22,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *selectChord3;
 @property (strong, nonatomic) IBOutlet UITextField *selectChord4;
 
+- (IBAction)randomPressed:(UIButton *)sender;
+
+
 
 
 

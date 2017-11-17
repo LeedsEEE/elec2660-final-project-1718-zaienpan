@@ -22,49 +22,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wps-1p-I5B">
-                                <rect key="frame" x="16" y="30" width="80" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wps-1p-I5B">
+                                <rect key="frame" x="16" y="30" width="80" height="60"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LpJ-pF-90V"/>
                                     <constraint firstAttribute="width" constant="80" id="y3y-AB-9Xc"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-ZU-8qT">
-                                <rect key="frame" x="104" y="29" width="80" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-ZU-8qT">
+                                <rect key="frame" x="104" y="29" width="80" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="bPS-bE-aSU"/>
+                                    <constraint firstAttribute="height" constant="60" id="g5e-SE-2F3"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnn-MR-dyz">
-                                <rect key="frame" x="192" y="29" width="80" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnn-MR-dyz">
+                                <rect key="frame" x="192" y="29" width="80" height="60"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4vm-O5-wq4"/>
                                     <constraint firstAttribute="width" constant="80" id="Gmh-tr-26r"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B95-U8-q6M">
-                                <rect key="frame" x="280" y="28" width="80" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B95-U8-q6M">
+                                <rect key="frame" x="280" y="28" width="80" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bdK-qP-Twd"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-gx-8CI">
+                                <rect key="frame" x="116" y="97" width="143" height="33"/>
+                                <state key="normal" title="Randomize All!"/>
+                                <connections>
+                                    <action selector="randomPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GhY-Pt-aKR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gFt-gx-8CI" secondAttribute="bottom" constant="537" id="3IV-eL-T3K"/>
                             <constraint firstItem="Zlc-ZU-8qT" firstAttribute="leading" secondItem="wps-1p-I5B" secondAttribute="trailing" constant="8" symbolic="YES" id="3sN-p7-cWh"/>
                             <constraint firstItem="wps-1p-I5B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="B7n-VJ-qQT"/>
                             <constraint firstItem="Zlc-ZU-8qT" firstAttribute="baseline" secondItem="jnn-MR-dyz" secondAttribute="baseline" id="Fqj-Li-UXx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gFt-gx-8CI" secondAttribute="trailing" constant="100" id="Jc3-AO-cop"/>
                             <constraint firstItem="B95-U8-q6M" firstAttribute="leading" secondItem="jnn-MR-dyz" secondAttribute="trailing" constant="8" symbolic="YES" id="NCf-OQ-enG"/>
                             <constraint firstItem="Zlc-ZU-8qT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="9" id="ezP-Th-VwM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B95-U8-q6M" secondAttribute="trailing" constant="-1" id="pFr-X7-GqZ"/>
                             <constraint firstItem="B95-U8-q6M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="t8m-9Z-EjE"/>
+                            <constraint firstItem="gFt-gx-8CI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="uwd-xA-tPZ"/>
                             <constraint firstItem="wps-1p-I5B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="y78-M4-16q"/>
                             <constraint firstItem="jnn-MR-dyz" firstAttribute="leading" secondItem="Zlc-ZU-8qT" secondAttribute="trailing" constant="8" symbolic="YES" id="z8N-Dt-FXT"/>
                         </constraints>
