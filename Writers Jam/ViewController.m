@@ -52,30 +52,9 @@
        inComponent:(NSInteger)component{
     
     NSLog(@"Selected Row %d", row);
-    switch(row)
-    {
-        case 0:
-            self.selectChord1.text = @"C";
-            break;
-        case 1:
-            self.selectChord1.text = @"Dm";
-            break;
-        case 2:
-            self.selectChord1.text = @"Em";
-            break;
-        case 3:
-            self.selectChord1.text = @"F";
-            break;
-        case 4:
-            self.selectChord1.text = @"G";
-            break;
-        case 5:
-            self.selectChord1.text = @"Am";
-            break;
-        case 6:
-            self.selectChord1.text = @"Bm7b5";
-            break;
 
+    {
+            self.selectChord1.text = _Cmajor[row];
     }
     
 }
