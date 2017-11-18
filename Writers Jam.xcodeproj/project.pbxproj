@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A339716B1FC0BA75007011C2 /* Aminor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33971631FC0BA75007011C2 /* Aminor.wav */; };
+		A339716C1FC0BA75007011C2 /* Bm7b5.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33971641FC0BA75007011C2 /* Bm7b5.wav */; };
+		A339716D1FC0BA75007011C2 /* Cmajor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33971651FC0BA75007011C2 /* Cmajor.wav */; };
+		A339716F1FC0BA75007011C2 /* Dminor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33971671FC0BA75007011C2 /* Dminor.wav */; };
+		A33971701FC0BA75007011C2 /* Eminor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33971681FC0BA75007011C2 /* Eminor.wav */; };
+		A33971711FC0BA75007011C2 /* Fmajor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33971691FC0BA75007011C2 /* Fmajor.wav */; };
+		A33971721FC0BA75007011C2 /* Gmajor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A339716A1FC0BA75007011C2 /* Gmajor.wav */; };
 		A3E0DAF91FBC8D82003E68A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DAF81FBC8D82003E68A5 /* main.m */; };
 		A3E0DAFC1FBC8D82003E68A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DAFB1FBC8D82003E68A5 /* AppDelegate.m */; };
 		A3E0DAFF1FBC8D82003E68A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DAFE1FBC8D82003E68A5 /* ViewController.m */; };
@@ -38,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A33971631FC0BA75007011C2 /* Aminor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Aminor.wav; sourceTree = "<group>"; };
+		A33971641FC0BA75007011C2 /* Bm7b5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bm7b5.wav; sourceTree = "<group>"; };
+		A33971651FC0BA75007011C2 /* Cmajor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Cmajor.wav; sourceTree = "<group>"; };
+		A33971671FC0BA75007011C2 /* Dminor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Dminor.wav; sourceTree = "<group>"; };
+		A33971681FC0BA75007011C2 /* Eminor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Eminor.wav; sourceTree = "<group>"; };
+		A33971691FC0BA75007011C2 /* Fmajor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Fmajor.wav; sourceTree = "<group>"; };
+		A339716A1FC0BA75007011C2 /* Gmajor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Gmajor.wav; sourceTree = "<group>"; };
 		A3E0DAF41FBC8D82003E68A5 /* Writers Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Writers Jam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E0DAF81FBC8D82003E68A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3E0DAFA1FBC8D82003E68A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +100,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A339714E1FC0B01F007011C2 /* Audio Samples */ = {
+			isa = PBXGroup;
+			children = (
+				A33971651FC0BA75007011C2 /* Cmajor.wav */,
+				A33971671FC0BA75007011C2 /* Dminor.wav */,
+				A33971681FC0BA75007011C2 /* Eminor.wav */,
+				A33971691FC0BA75007011C2 /* Fmajor.wav */,
+				A339716A1FC0BA75007011C2 /* Gmajor.wav */,
+				A33971631FC0BA75007011C2 /* Aminor.wav */,
+				A33971641FC0BA75007011C2 /* Bm7b5.wav */,
+			);
+			name = "Audio Samples";
+			sourceTree = "<group>";
+		};
 		A3E0DAEB1FBC8D82003E68A5 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +148,7 @@
 				A3E0DB031FBC8D82003E68A5 /* Assets.xcassets */,
 				A3E0DB051FBC8D82003E68A5 /* LaunchScreen.storyboard */,
 				A3E0DB081FBC8D82003E68A5 /* Info.plist */,
+				A339714E1FC0B01F007011C2 /* Audio Samples */,
 				A3E0DB2F1FBDDC09003E68A5 /* Images */,
 				A3E0DAF71FBC8D82003E68A5 /* Supporting Files */,
 			);
@@ -274,9 +303,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33971701FC0BA75007011C2 /* Eminor.wav in Resources */,
+				A339716C1FC0BA75007011C2 /* Bm7b5.wav in Resources */,
+				A33971721FC0BA75007011C2 /* Gmajor.wav in Resources */,
 				A3E0DB071FBC8D82003E68A5 /* LaunchScreen.storyboard in Resources */,
+				A33971711FC0BA75007011C2 /* Fmajor.wav in Resources */,
+				A339716B1FC0BA75007011C2 /* Aminor.wav in Resources */,
 				A3E0DB041FBC8D82003E68A5 /* Assets.xcassets in Resources */,
 				A3E0DB2E1FBDDC06003E68A5 /* LaunchScreenImage.jpg in Resources */,
+				A339716F1FC0BA75007011C2 /* Dminor.wav in Resources */,
+				A339716D1FC0BA75007011C2 /* Cmajor.wav in Resources */,
 				A3E0DB021FBC8D82003E68A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

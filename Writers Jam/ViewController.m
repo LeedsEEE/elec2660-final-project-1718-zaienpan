@@ -15,6 +15,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupAudioPlayers];
+    [self tempoSliderDidMove:self.tempoSlider];
+    
     
     self.Cmajor  = [[NSArray alloc] initWithObjects:@"C",@"Dm",@"Em",@"F",@"G",@"Am",@"Bm7b5", nil];
 
@@ -42,6 +45,9 @@
     self.selectChord2.inputView = chordPicker2;
     self.selectChord3.inputView = chordPicker3;
     self.selectChord4.inputView = chordPicker4;
+    
+
+    
 
 }
 
@@ -97,6 +103,24 @@ numberOfRowsInComponent:(NSInteger)component{
            withEvent:(UIEvent *)event {
     [self.view endEditing:YES];}
 
+- (IBAction)tempoSliderDidMove:(UISlider *)sender {
+    self.BPM = self.tempoSlider.value;
+    NSLog(@"BPM = %d", (int)self.BPM);
+    self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
+}
+
+- (IBAction)tempoPlus:(UIButton *)sender {
+    self.BPM += 1;
+    NSLog(@"BPM = %d", (int)self.BPM);
+        self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
+}
+
+- (IBAction)tempoMinus:(UIButton *)sender {
+    self.BPM -= 1;
+    NSLog(@"BPM = %d", (int)self.BPM);
+        self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
+}
+
 - (IBAction)randomPressed:(UIButton *)sender {
     NSUInteger random = arc4random_uniform(_Cmajor.count);
     NSUInteger random2 = arc4random_uniform(_Cmajor.count);
@@ -109,5 +133,66 @@ numberOfRowsInComponent:(NSInteger)component{
     self.selectChord3.text = _Cmajor[random3];
     self.selectChord4.text = _Cmajor[random4];
     }
+
+- (IBAction)didPressPlay:(UIButton *)sender {
+    NSLog(@"Pressed Play %ld", sender.tag);
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.BPM target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+}
+                
+- (void) timerFire:(NSTimer *)timer {
+    NSLog(@"Timer Fire! chord %ld", (long)self.chordLoop);
+    
+    self.selectChord1.tag = 0;
+    self.selectChord2.tag = 1;
+    self.selectChord3.tag = 2;
+    self.selectChord4.tag = 3;
+    
+    if (self.selectChord1.tag == self.chordLoop){
+                self.selectChord1.backgroundColor = [UIColor orangeColor];
+            } else { self.selectChord1.backgroundColor = [UIColor whiteColor];
+            }
+    if (self.selectChord2.tag == self.chordLoop){
+        self.selectChord2.backgroundColor = [UIColor orangeColor];
+    } else { self.selectChord2.backgroundColor = [UIColor whiteColor];
+    }
+    
+    if (self.selectChord3.tag == self.chordLoop){
+        self.selectChord3.backgroundColor = [UIColor orangeColor];
+    } else { self.selectChord3.backgroundColor = [UIColor whiteColor];
+    }
+    
+    if (self.selectChord4.tag == self.chordLoop){
+        self.selectChord4.backgroundColor = [UIColor orangeColor];
+    } else { self.selectChord4.backgroundColor = [UIColor whiteColor];
+    }
+    
+    
+    
+
+    
+    
+    self.chordLoop++;
+    if (self.chordLoop > 3)
+        self.chordLoop = 0;
+}
+
+- (void) initBackgroundFlash {
+    for (UITextField *textField in self.chordFields) {
+        textField.backgroundColor =  [UIColor whiteColor];
+    }
+}
+                  
+                  
+
+- (void) setupAudioPlayers {
+    NSLog(@"Setup audio player path");
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Cmajor" ofType:@"wav"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+    
+    self.trackOne = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    [self.trackOne prepareToPlay];
+}
 
 @end
