@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ChordLibrary : NSObject
-
-@property (strong, nonatomic) NSArray *Cmajor;
-
 
 
 @end

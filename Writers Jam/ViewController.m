@@ -19,7 +19,7 @@
     [self tempoSliderDidMove:self.tempoSlider];
     
     
-    self.Cmajor  = [[NSArray alloc] initWithObjects:@"C",@"Dm",@"Em",@"F",@"G",@"Am",@"Bm7b5", nil];
+    self.CmajorKey  = [[NSArray alloc] initWithObjects:@"C",@"Dm",@"Em",@"F",@"G",@"Am",@"Bm7b5", nil];
 
 
 
@@ -66,7 +66,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component{
     
-    return [self.Cmajor count];
+    return [self.CmajorKey count];
     
 }
 
@@ -74,7 +74,7 @@ numberOfRowsInComponent:(NSInteger)component{
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component{
 
-        return [self.Cmajor objectAtIndex:row];
+        return [self.CmajorKey objectAtIndex:row];
     
 }
 
@@ -86,13 +86,13 @@ numberOfRowsInComponent:(NSInteger)component{
     
     //update each textfield with pickerview input
     if (pickerView.tag == 1){
-        self.selectChord1.text = _Cmajor[row];
+        self.selectChord1.text = _CmajorKey[row];
     } else if (pickerView.tag == 2){
-        self.selectChord2.text = _Cmajor[row];
+        self.selectChord2.text = _CmajorKey[row];
     } else if (pickerView.tag == 3){
-        self.selectChord3.text = _Cmajor[row];
+        self.selectChord3.text = _CmajorKey[row];
     } else if (pickerView.tag == 4){
-        self.selectChord4.text = _Cmajor[row];
+        self.selectChord4.text = _CmajorKey[row];
     }
     
     
@@ -107,6 +107,10 @@ numberOfRowsInComponent:(NSInteger)component{
     self.BPM = self.tempoSlider.value;
     NSLog(@"BPM = %d", (int)self.BPM);
     self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
+
+        [self.timer invalidate];
+        [self didPressPlay:nil];
+    
 }
 
 - (IBAction)tempoPlus:(UIButton *)sender {
@@ -121,27 +125,70 @@ numberOfRowsInComponent:(NSInteger)component{
         self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
 }
 
-- (IBAction)randomPressed:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(_Cmajor.count);
-    NSUInteger random2 = arc4random_uniform(_Cmajor.count);
-    NSUInteger random3 = arc4random_uniform(_Cmajor.count);
-    NSUInteger random4 = arc4random_uniform(_Cmajor.count);
-    [_chordPicker selectRow:random inComponent:0 animated:YES];
-
-    self.selectChord1.text = _Cmajor[random];
-    self.selectChord2.text = _Cmajor[random2];
-    self.selectChord3.text = _Cmajor[random3];
-    self.selectChord4.text = _Cmajor[random4];
+- (IBAction)randomAllPressed:(UIButton *)sender {
     }
+
+- (IBAction)randomChord1:(UIButton *)sender {
+    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    [_chordPicker selectRow:random inComponent:0 animated:YES];
+        self.selectChord1.text = _CmajorKey[random];
+}
+
+- (IBAction)randomChord2:(UIButton *)sender {
+    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    [_chordPicker selectRow:random inComponent:0 animated:YES];
+    self.selectChord2.text = _CmajorKey[random];
+}
+
+- (IBAction)randomChord3:(UIButton *)sender {
+    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    [_chordPicker selectRow:random inComponent:0 animated:YES];
+    self.selectChord3.text = _CmajorKey[random];
+}
+
+- (IBAction)randomChord4:(UIButton *)sender {
+    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    [_chordPicker selectRow:random inComponent:0 animated:YES];
+    self.selectChord4.text = _CmajorKey[random];
+}
+
+- (IBAction)clearAll:(UIButton *)sender {
+    self.selectChord1.backgroundColor = [UIColor whiteColor];
+    self.selectChord2.backgroundColor = [UIColor whiteColor];
+    self.selectChord3.backgroundColor = [UIColor whiteColor];
+    self.selectChord4.backgroundColor = [UIColor whiteColor];
+}
+    
+- (IBAction)clearChord1:(UIButton *)sender {
+    self.selectChord1.text = nil;
+}
+- (IBAction)clearChord2:(UIButton *)sender {
+    self.selectChord2.text = nil;
+}
+- (IBAction)clearChord3:(UIButton *)sender {
+    self.selectChord3.text = nil;
+}
+- (IBAction)clearChord4:(UIButton *)sender {
+    self.selectChord4.text = nil;
+}
 
 - (IBAction)didPressPlay:(UIButton *)sender {
     NSLog(@"Pressed Play %ld", sender.tag);
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.BPM target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
 }
-                
+
+- (IBAction)didPressStop:(UIButton *)sender {
+    NSLog(@"STOPPED");
+    self.playing = NO;
+    [self.timer invalidate];
+    self.chordLoop = 0;
+}
+
+
 - (void) timerFire:(NSTimer *)timer {
-    NSLog(@"Timer Fire! chord %ld", (long)self.chordLoop);
+    NSLog(@"Timer Fired! chord %ld", (long)self.chordLoop);
+        //NSLog(@"%@",self.selectChord1.text);
     
     self.selectChord1.tag = 0;
     self.selectChord2.tag = 1;
@@ -149,9 +196,11 @@ numberOfRowsInComponent:(NSInteger)component{
     self.selectChord4.tag = 3;
     
     if (self.selectChord1.tag == self.chordLoop){
-                self.selectChord1.backgroundColor = [UIColor orangeColor];
-            } else { self.selectChord1.backgroundColor = [UIColor whiteColor];
+        self.selectChord1.backgroundColor = [UIColor orangeColor];}
+    else {
+        self.selectChord1.backgroundColor = [UIColor whiteColor];
             }
+    
     if (self.selectChord2.tag == self.chordLoop){
         self.selectChord2.backgroundColor = [UIColor orangeColor];
     } else { self.selectChord2.backgroundColor = [UIColor whiteColor];
@@ -167,6 +216,76 @@ numberOfRowsInComponent:(NSInteger)component{
     } else { self.selectChord4.backgroundColor = [UIColor whiteColor];
     }
     
+    //things related to playback
+    if (self.selectChord1.tag == self.chordLoop){
+        if ([self.selectChord1.text isEqualToString:@"C"]) {
+            [self.playCmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"Dm"]) {
+            [self.playDminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"Em"]) {
+            [self.playEminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"F"]) {
+            [self.playFmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"G"]) {
+            [self.playGmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"Am"]) {
+            [self.playAminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"Bm7b5"]) {
+            [self.playBm7b5 play];}
+    }
+    if (self.selectChord2.tag == self.chordLoop){
+        if ([self.selectChord2.text isEqualToString:@"C"]) {
+            [self.playCmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"Dm"]) {
+            [self.playDminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"Em"]) {
+            [self.playEminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"F"]) {
+            [self.playFmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"G"]) {
+            [self.playGmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"Am"]) {
+            [self.playAminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"Bm7b5"]) {
+            [self.playBm7b5 play];}
+    }
+    if (self.selectChord3.tag == self.chordLoop){
+        if ([self.selectChord3.text isEqualToString:@"C"]) {
+            [self.playCmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"Dm"]) {
+            [self.playDminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"Em"]) {
+            [self.playEminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"F"]) {
+            [self.playFmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"G"]) {
+            [self.playGmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"Am"]) {
+            [self.playAminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"Bm7b5"]) {
+            [self.playBm7b5 play];}
+    }
+    if (self.selectChord4.tag == self.chordLoop){
+        if ([self.selectChord4.text isEqualToString:@"C"]) {
+            [self.playCmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"Dm"]) {
+            [self.playDminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"Em"]) {
+            [self.playEminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"F"]) {
+            [self.playFmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"G"]) {
+            [self.playGmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"Am"]) {
+            [self.playAminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"Bm7b5"]) {
+            [self.playBm7b5 play];}
+    }
+
+
+    
+    
+    
     
     
 
@@ -177,22 +296,45 @@ numberOfRowsInComponent:(NSInteger)component{
         self.chordLoop = 0;
 }
 
-- (void) initBackgroundFlash {
-    for (UITextField *textField in self.chordFields) {
-        textField.backgroundColor =  [UIColor whiteColor];
-    }
-}
-                  
                   
 
 - (void) setupAudioPlayers {
     NSLog(@"Setup audio player path");
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Cmajor" ofType:@"wav"];
-    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+    NSString *Cmajor = [[NSBundle mainBundle] pathForResource:@"Cmajor" ofType:@"wav"];
+    NSURL *CmajorURL = [[NSURL alloc] initFileURLWithPath:Cmajor];
+    self.playCmajor = [[AVAudioPlayer alloc] initWithContentsOfURL:CmajorURL error:nil];
+    [self.playCmajor prepareToPlay];
     
-    self.trackOne = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-    [self.trackOne prepareToPlay];
+    NSString *Dminor = [[NSBundle mainBundle] pathForResource:@"Dminor" ofType:@"wav"];
+    NSURL *DminorURL = [[NSURL alloc] initFileURLWithPath:Dminor];
+    self.playDminor = [[AVAudioPlayer alloc] initWithContentsOfURL:DminorURL error:nil];
+    [self.playDminor prepareToPlay];
+    
+    NSString *Eminor = [[NSBundle mainBundle] pathForResource:@"Eminor" ofType:@"wav"];
+    NSURL *EminorURL = [[NSURL alloc] initFileURLWithPath:Eminor];
+    self.playEminor = [[AVAudioPlayer alloc] initWithContentsOfURL:EminorURL error:nil];
+    [self.playEminor prepareToPlay];
+    
+    NSString *Fmajor = [[NSBundle mainBundle] pathForResource:@"Fmajor" ofType:@"wav"];
+    NSURL *FmajorURL = [[NSURL alloc] initFileURLWithPath:Fmajor];
+    self.playFmajor = [[AVAudioPlayer alloc] initWithContentsOfURL:FmajorURL error:nil];
+    [self.playFmajor prepareToPlay];
+    
+    NSString *Gmajor = [[NSBundle mainBundle] pathForResource:@"Gmajor" ofType:@"wav"];
+    NSURL *GmajorURL = [[NSURL alloc] initFileURLWithPath:Gmajor];
+    self.playGmajor = [[AVAudioPlayer alloc] initWithContentsOfURL:GmajorURL error:nil];
+    [self.playGmajor prepareToPlay];
+    
+    NSString *Aminor = [[NSBundle mainBundle] pathForResource:@"Aminor" ofType:@"wav"];
+    NSURL *AminorURL = [[NSURL alloc] initFileURLWithPath:Aminor];
+    self.playAminor = [[AVAudioPlayer alloc] initWithContentsOfURL:AminorURL error:nil];
+    [self.playAminor prepareToPlay];
+    
+    NSString *Bm7b5 = [[NSBundle mainBundle] pathForResource:@"Bm7b5" ofType:@"wav"];
+    NSURL *Bm7b5URL = [[NSURL alloc] initFileURLWithPath:Bm7b5];
+    self.playBm7b5 = [[AVAudioPlayer alloc] initWithContentsOfURL:Bm7b5URL error:nil];
+    [self.playBm7b5 prepareToPlay];
 }
 
 @end
