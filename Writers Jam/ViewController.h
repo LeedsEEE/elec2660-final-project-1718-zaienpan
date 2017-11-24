@@ -15,7 +15,7 @@
 
 
 @property (strong, nonatomic) IBOutlet UIPickerView *chordPicker;
-//@property ChordLibrary *setKey;
+
 
 
 
@@ -60,7 +60,7 @@
 - (IBAction)tempoMinus:(UIButton *)sender;
 
 
-
+@property (weak, nonatomic) IBOutlet UIButton *didPressPlay;
 - (IBAction)didPressPlay:(UIButton *)sender;
 - (IBAction)didPressStop:(UIButton *)sender;
 

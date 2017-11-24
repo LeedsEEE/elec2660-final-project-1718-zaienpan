@@ -306,6 +306,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="didPressPlay" destination="eTt-YG-u1Z" id="d9x-rC-fWv"/>
                         <outlet property="keyLabel" destination="wnx-4g-RyL" id="Ztf-zP-iF3"/>
                         <outlet property="selectChord1" destination="wps-1p-I5B" id="qvW-6n-Ql3"/>
                         <outlet property="selectChord2" destination="Zlc-ZU-8qT" id="63B-7t-9Iv"/>

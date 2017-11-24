@@ -178,9 +178,12 @@ numberOfRowsInComponent:(NSInteger)component{
 }
 
 - (IBAction)didPressPlay:(UIButton *)sender {
+
     NSLog(@"Pressed Play %ld", sender.tag);
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.BPM target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+    ((UIButton *)sender).enabled = NO; //disables second pressing
+    
 }
 
 - (IBAction)didPressStop:(UIButton *)sender {
@@ -188,6 +191,8 @@ numberOfRowsInComponent:(NSInteger)component{
     self.playing = NO;
     [self.timer invalidate];
     self.chordLoop = 0;
+    self.didPressPlay.enabled = YES;
+
 }
 
 
