@@ -180,8 +180,9 @@ numberOfRowsInComponent:(NSInteger)component{
 - (IBAction)didPressPlay:(UIButton *)sender {
 
     NSLog(@"Pressed Play %ld", sender.tag);
-    
+    if(self.playing==NO){
     self.timer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.BPM target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+    }
     ((UIButton *)sender).enabled = NO; //disables second pressing
     
 }
@@ -316,10 +317,35 @@ numberOfRowsInComponent:(NSInteger)component{
     self.playCmajor = [[AVAudioPlayer alloc] initWithContentsOfURL:CmajorURL error:nil];
     [self.playCmajor prepareToPlay];
     
+    NSString *Cminor = [[NSBundle mainBundle] pathForResource:@"Cminor" ofType:@"wav"];
+    NSURL *CminorURL = [[NSURL alloc] initFileURLWithPath:Cmajor];
+    self.playCminor = [[AVAudioPlayer alloc] initWithContentsOfURL:CminorURL error:nil];
+    [self.playCminor prepareToPlay];
+    
+    NSString *Cm7b5 = [[NSBundle mainBundle] pathForResource:@"Cm7b5" ofType:@"wav"];
+    NSURL *Cm7b5URL = [[NSURL alloc] initFileURLWithPath:Cmajor];
+    self.playCm7b5 = [[AVAudioPlayer alloc] initWithContentsOfURL:Cm7b5URL error:nil];
+    [self.playCm7b5 prepareToPlay];
+    
+    NSString *Dmajor = [[NSBundle mainBundle] pathForResource:@"Dmajor" ofType:@"wav"];
+    NSURL *DmajorURL = [[NSURL alloc] initFileURLWithPath:Dmajor];
+    self.playDmajor = [[AVAudioPlayer alloc] initWithContentsOfURL:DmajorURL error:nil];
+    [self.playDmajor prepareToPlay];
+    
     NSString *Dminor = [[NSBundle mainBundle] pathForResource:@"Dminor" ofType:@"wav"];
     NSURL *DminorURL = [[NSURL alloc] initFileURLWithPath:Dminor];
     self.playDminor = [[AVAudioPlayer alloc] initWithContentsOfURL:DminorURL error:nil];
     [self.playDminor prepareToPlay];
+    
+    NSString *Dm7b5 = [[NSBundle mainBundle] pathForResource:@"Dm7b5" ofType:@"wav"];
+    NSURL *Dm7b5URL = [[NSURL alloc] initFileURLWithPath:Dm7b5];
+    self.playDm7b5 = [[AVAudioPlayer alloc] initWithContentsOfURL:Dm7b5URL error:nil];
+    [self.playDm7b5 prepareToPlay];
+    
+    NSString *Emajor = [[NSBundle mainBundle] pathForResource:@"Emajor" ofType:@"wav"];
+    NSURL *EmajorURL = [[NSURL alloc] initFileURLWithPath:Dmajor];
+    self.playEmajor = [[AVAudioPlayer alloc] initWithContentsOfURL:EmajorURL error:nil];
+    [self.playEmajor prepareToPlay];
     
     NSString *Eminor = [[NSBundle mainBundle] pathForResource:@"Eminor" ofType:@"wav"];
     NSURL *EminorURL = [[NSURL alloc] initFileURLWithPath:Eminor];
@@ -348,5 +374,8 @@ numberOfRowsInComponent:(NSInteger)component{
 }
 
 - (IBAction)pickKey:(UIButton *)sender {
+    self.playing = NO;
+    [self.timer invalidate];
+    self.chordLoop = 0;
 }
 @end

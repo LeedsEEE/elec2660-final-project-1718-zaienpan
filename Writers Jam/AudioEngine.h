@@ -8,21 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-#import "ChordLibrary.h"
-#import "ViewController.h"
 
 @interface AudioEngine : NSObject
+{
+    
+}
 
-@property (strong, nonatomic) AVAudioPlayer *Chord1;
++ (AudioEngine *) sharedInstance;
 
-@property (strong, nonatomic) AVAudioPlayer *playCmajor;
-@property (strong, nonatomic) AVAudioPlayer *playDminor;
-@property (strong, nonatomic) AVAudioPlayer *playEminor;
-@property (strong, nonatomic) AVAudioPlayer *playFmajor;
-@property (strong, nonatomic) AVAudioPlayer *playGmajor;
-@property (strong, nonatomic) AVAudioPlayer *playAminor;
-@property (strong, nonatomic) AVAudioPlayer *playBm7b5;
+//
+
+@property (nonatomic,copy) NSString *chord1;
+@property (nonatomic,copy) NSString *chord2;
+@property (nonatomic,copy) NSString *chord3;
+@property (nonatomic,copy) NSString *chord4;
+
 
 @end
-
-
