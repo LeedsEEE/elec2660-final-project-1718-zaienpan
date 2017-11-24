@@ -29,8 +29,6 @@
         self.Bmajor = [[NSArray alloc] initWithObjects:@"B",@"C#m",@"D#m",@"E",@"F#",@"G#m",@"A#m7b5", nil];
     
 
-        
-
     }
     return self;
 }
