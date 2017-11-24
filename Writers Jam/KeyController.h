@@ -20,9 +20,11 @@
 @property ChordLibrary *setKey;
 @property (strong, nonatomic) NSArray *keySignature;
 @property (strong, nonatomic) IBOutlet UILabel *selectedKey;
+@property (strong, nonatomic) IBOutlet UILabel *majorOrMinor;
 
 
 
+- (IBAction)majorMinorSwitch:(UISwitch *)sender;
 - (IBAction)selectedC:(UIButton *)sender;
 - (IBAction)selectedDb:(UIButton *)sender;
 - (IBAction)selectedD:(UIButton *)sender;
@@ -35,7 +37,20 @@
 - (IBAction)selectedA:(UIButton *)sender;
 - (IBAction)selectedBb:(UIButton *)sender;
 - (IBAction)selectedB:(UIButton *)sender;
+- (IBAction)selectedNoKey:(UIButton *)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *C;
+@property (strong, nonatomic) IBOutlet UIButton *Db;
+@property (strong, nonatomic) IBOutlet UIButton *D;
+@property (strong, nonatomic) IBOutlet UIButton *Eb;
+@property (strong, nonatomic) IBOutlet UIButton *E;
+@property (strong, nonatomic) IBOutlet UIButton *F;
+@property (strong, nonatomic) IBOutlet UIButton *Gb;
+@property (strong, nonatomic) IBOutlet UIButton *G;
+@property (strong, nonatomic) IBOutlet UIButton *Ab;
+@property (strong, nonatomic) IBOutlet UIButton *A;
+@property (strong, nonatomic) IBOutlet UIButton *Bb;
+@property (strong, nonatomic) IBOutlet UIButton *B;
 
 
 

@@ -14,6 +14,7 @@
 
 @implementation KeyController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -46,6 +47,42 @@
 - (IBAction)backButtonPressed:(UIButton *)sender {
 }
 
+
+- (IBAction)majorMinorSwitch:(UISwitch *)sender {
+    if (sender.on){
+        self.majorOrMinor.text = @"Major";
+        [self.C setTitle:@"C" forState:UIControlStateNormal];
+        [self.Db setTitle:@"Db" forState:UIControlStateNormal];
+        [self.D setTitle:@"D" forState:UIControlStateNormal];
+        [self.Eb setTitle:@"Eb" forState:UIControlStateNormal];
+        [self.E setTitle:@"E" forState:UIControlStateNormal];
+        [self.F setTitle:@"F" forState:UIControlStateNormal];
+        [self.Gb setTitle:@"Gb" forState:UIControlStateNormal];
+        [self.G setTitle:@"G" forState:UIControlStateNormal];
+        [self.Ab setTitle:@"Ab" forState:UIControlStateNormal];
+        [self.A setTitle:@"A" forState:UIControlStateNormal];
+        [self.Bb setTitle:@"Bb" forState:UIControlStateNormal];
+        [self.B setTitle:@"B" forState:UIControlStateNormal];
+
+    }
+    else { self.majorOrMinor.text = @"Minor";
+        [self.C setTitle:@"Am" forState:UIControlStateNormal];
+        [self.Db setTitle:@"Bbm" forState:UIControlStateNormal];
+        [self.D setTitle:@"Bm" forState:UIControlStateNormal];
+        [self.Eb setTitle:@"Cm" forState:UIControlStateNormal];
+        [self.E setTitle:@"C#m" forState:UIControlStateNormal];
+        [self.F setTitle:@"Dm" forState:UIControlStateNormal];
+        [self.Gb setTitle:@"Ebm" forState:UIControlStateNormal];
+        [self.G setTitle:@"Em" forState:UIControlStateNormal];
+        [self.Ab setTitle:@"Fm" forState:UIControlStateNormal];
+        [self.A setTitle:@"F#m" forState:UIControlStateNormal];
+        [self.Bb setTitle:@"Gm" forState:UIControlStateNormal];
+        [self.B setTitle:@"G#m" forState:UIControlStateNormal];
+
+        
+        
+    }
+}
 
 - (IBAction)selectedC:(UIButton *)sender {
         self.selectedKey.text = @"C";
@@ -96,5 +133,10 @@
         self.keySignature = self.setKey.Bmajor;
     
     
+}
+
+- (IBAction)selectedNoKey:(UIButton *)sender {
+    self.selectedKey.text = @"Free Mode";
+    self.keySignature = self.setKey.AllChords;
 }
 @end

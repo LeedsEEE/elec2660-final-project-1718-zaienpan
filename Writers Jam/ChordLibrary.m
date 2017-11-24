@@ -27,7 +27,10 @@
         self.Amajor = [[NSArray alloc] initWithObjects:@"A",@"Bm",@"C#m",@"D",@"E",@"F#m",@"G#m7b5", nil];
         self.Bbmajor = [[NSArray alloc] initWithObjects:@"Bb",@"Cm",@"Dm",@"Eb",@"F",@"Gm",@"Am7b5", nil];
         self.Bmajor = [[NSArray alloc] initWithObjects:@"B",@"C#m",@"D#m",@"E",@"F#",@"G#m",@"A#m7b5", nil];
-    
+        
+        self.AllChords = [[NSArray alloc] initWithObjects:@"C",@"Cm",@"Cm7b5",@"C#",@"C#m",@"C#m7b5",@"D",@"Dm",@"Dm7b5",@"D#",@"D#m",@"D#m7b5",@"E",@"Em",@"Em7b5",
+                                                          @"F",@"Fm",@"Fm7b5",@"F#",@"F#m",@"F#m7b5",@"G",@"Gm",@"Gm7b5",@"G#",@"G#m",@"G#m7b5",@"A",@"Am",@"Am7b5",
+                                                          @"A#",@"A#m",@"A#m7b5",@"B",@"Bm",@"Bm7b5",nil];
 
     }
     return self;

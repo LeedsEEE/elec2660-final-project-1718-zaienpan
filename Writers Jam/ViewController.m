@@ -23,10 +23,6 @@
     self.keyLabel.text = self.keyToPass;
     self.keySignature = self.keySignatureToPass;
     
-    //self.setKey = [[ChordLibrary alloc] init];
-    //self.setKey.Cmajor;
-
-
     //using UIPickerView as input for the chords
     UIPickerView *chordPicker = [[UIPickerView alloc] init];
     chordPicker.delegate = self;
@@ -111,7 +107,6 @@ numberOfRowsInComponent:(NSInteger)component{
     self.BPM = self.tempoSlider.value;
     NSLog(@"BPM = %d", (int)self.BPM);
     self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
-
         [self.timer invalidate];
         [self didPressPlay:nil];
     
@@ -134,25 +129,25 @@ numberOfRowsInComponent:(NSInteger)component{
 
 //code to randomize picker from stackoverflow
 - (IBAction)randomChord1:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(self.keySignature.count);
+    NSUInteger random = arc4random_uniform((uint32_t) self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
         self.selectChord1.text = self.keySignature[random];
 }
 
 - (IBAction)randomChord2:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(self.keySignature.count);
+    NSUInteger random = arc4random_uniform((uint32_t) self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
     self.selectChord2.text = self.keySignature[random];
 }
 
 - (IBAction)randomChord3:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(self.keySignature.count);
+    NSUInteger random = arc4random_uniform((uint32_t) self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
     self.selectChord3.text = self.keySignature[random];
 }
 
 - (IBAction)randomChord4:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(self.keySignature.count);
+    NSUInteger random = arc4random_uniform((uint32_t) self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
     self.selectChord4.text = self.keySignature[random];
 }
@@ -247,12 +242,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playDbminor play];}
         else if ([self.selectChord1.text isEqualToString:@"Dbm7b5"]) {
             [self.playDbm7b5 play];}
+        else if ([self.selectChord1.text isEqualToString:@"C#"]) {
+            [self.playDbmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"C#m"]) {
+            [self.playDbminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"C#m7b5"]) {
+            [self.playDbm7b5 play];}
         else if ([self.selectChord1.text isEqualToString:@"D"]) {
             [self.playDmajor play];}
         else if ([self.selectChord1.text isEqualToString:@"Dm"]) {
             [self.playDminor play];}
         else if ([self.selectChord1.text isEqualToString:@"Dm7b5"]) {
             [self.playDm7b5 play];}
+        else if ([self.selectChord1.text isEqualToString:@"D#"]) {
+            [self.playEbmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"D#m"]) {
+            [self.playEbminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"D#m7b5"]) {
+            [self.playEbm7b5 play];}
         else if ([self.selectChord1.text isEqualToString:@"Eb"]) {
             [self.playEbmajor play];}
         else if ([self.selectChord1.text isEqualToString:@"Ebm"]) {
@@ -277,12 +284,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playGbminor play];}
         else if ([self.selectChord1.text isEqualToString:@"Gbm7b5"]) {
             [self.playGbm7b5 play];}
+        else if ([self.selectChord1.text isEqualToString:@"F#"]) {
+            [self.playGbmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"F#m"]) {
+            [self.playGbminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"F#m7b5"]) {
+            [self.playGbm7b5 play];}
         else if ([self.selectChord1.text isEqualToString:@"G"]) {
             [self.playGmajor play];}
         else if ([self.selectChord1.text isEqualToString:@"Gm"]) {
             [self.playGminor play];}
         else if ([self.selectChord1.text isEqualToString:@"Gm7b5"]) {
             [self.playGm7b5 play];}
+        else if ([self.selectChord1.text isEqualToString:@"G#"]) {
+            [self.playAbmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"G#m"]) {
+            [self.playAbminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"G#m7b5"]) {
+            [self.playAbm7b5 play];}
         else if ([self.selectChord1.text isEqualToString:@"Ab"]) {
             [self.playAbmajor play];}
         else if ([self.selectChord1.text isEqualToString:@"Abm"]) {
@@ -295,6 +314,12 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playAminor play];}
         else if ([self.selectChord1.text isEqualToString:@"Am7b5"]) {
             [self.playAm7b5 play];}
+        else if ([self.selectChord1.text isEqualToString:@"A#"]) {
+            [self.playBbmajor play];}
+        else if ([self.selectChord1.text isEqualToString:@"A#m"]) {
+            [self.playBbminor play];}
+        else if ([self.selectChord1.text isEqualToString:@"A#m7b5"]) {
+            [self.playBbm7b5 play];}
         else if ([self.selectChord1.text isEqualToString:@"Bb"]) {
             [self.playBbmajor play];}
         else if ([self.selectChord1.text isEqualToString:@"Bbm"]) {
@@ -322,12 +347,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playDbminor play];}
         else if ([self.selectChord2.text isEqualToString:@"Dbm7b5"]) {
             [self.playDbm7b5 play];}
+        else if ([self.selectChord2.text isEqualToString:@"C#"]) {
+            [self.playDbmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"C#m"]) {
+            [self.playDbminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"C#m7b5"]) {
+            [self.playDbm7b5 play];}
         else if ([self.selectChord2.text isEqualToString:@"D"]) {
             [self.playDmajor play];}
         else if ([self.selectChord2.text isEqualToString:@"Dm"]) {
             [self.playDminor play];}
         else if ([self.selectChord2.text isEqualToString:@"Dm7b5"]) {
             [self.playDm7b5 play];}
+        else if ([self.selectChord2.text isEqualToString:@"D#"]) {
+            [self.playEbmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"D#m"]) {
+            [self.playEbminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"D#m7b5"]) {
+            [self.playEbm7b5 play];}
         else if ([self.selectChord2.text isEqualToString:@"Eb"]) {
             [self.playEbmajor play];}
         else if ([self.selectChord2.text isEqualToString:@"Ebm"]) {
@@ -352,12 +389,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playGbminor play];}
         else if ([self.selectChord2.text isEqualToString:@"Gbm7b5"]) {
             [self.playGbm7b5 play];}
+        else if ([self.selectChord2.text isEqualToString:@"F#"]) {
+            [self.playGbmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"F#m"]) {
+            [self.playGbminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"F#m7b5"]) {
+            [self.playGbm7b5 play];}
         else if ([self.selectChord2.text isEqualToString:@"G"]) {
             [self.playGmajor play];}
         else if ([self.selectChord2.text isEqualToString:@"Gm"]) {
             [self.playGminor play];}
         else if ([self.selectChord2.text isEqualToString:@"Gm7b5"]) {
             [self.playGm7b5 play];}
+        else if ([self.selectChord2.text isEqualToString:@"G#"]) {
+            [self.playAbmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"G#m"]) {
+            [self.playAbminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"G#m7b5"]) {
+            [self.playAbm7b5 play];}
         else if ([self.selectChord2.text isEqualToString:@"Ab"]) {
             [self.playAbmajor play];}
         else if ([self.selectChord2.text isEqualToString:@"Abm"]) {
@@ -370,6 +419,12 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playAminor play];}
         else if ([self.selectChord2.text isEqualToString:@"Am7b5"]) {
             [self.playAm7b5 play];}
+        else if ([self.selectChord2.text isEqualToString:@"A#"]) {
+            [self.playBbmajor play];}
+        else if ([self.selectChord2.text isEqualToString:@"A#m"]) {
+            [self.playBbminor play];}
+        else if ([self.selectChord2.text isEqualToString:@"A#m7b5"]) {
+            [self.playBbm7b5 play];}
         else if ([self.selectChord2.text isEqualToString:@"Bb"]) {
             [self.playBbmajor play];}
         else if ([self.selectChord2.text isEqualToString:@"Bbm"]) {
@@ -396,12 +451,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playDbminor play];}
         else if ([self.selectChord3.text isEqualToString:@"Dbm7b5"]) {
             [self.playDbm7b5 play];}
+        else if ([self.selectChord3.text isEqualToString:@"C#"]) {
+            [self.playDbmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"C#m"]) {
+            [self.playDbminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"C#m7b5"]) {
+            [self.playDbm7b5 play];}
         else if ([self.selectChord3.text isEqualToString:@"D"]) {
             [self.playDmajor play];}
         else if ([self.selectChord3.text isEqualToString:@"Dm"]) {
             [self.playDminor play];}
         else if ([self.selectChord3.text isEqualToString:@"Dm7b5"]) {
             [self.playDm7b5 play];}
+        else if ([self.selectChord3.text isEqualToString:@"D#"]) {
+            [self.playEbmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"D#m"]) {
+            [self.playEbminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"D#m7b5"]) {
+            [self.playEbm7b5 play];}
         else if ([self.selectChord3.text isEqualToString:@"Eb"]) {
             [self.playEbmajor play];}
         else if ([self.selectChord3.text isEqualToString:@"Ebm"]) {
@@ -426,12 +493,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playGbminor play];}
         else if ([self.selectChord3.text isEqualToString:@"Gbm7b5"]) {
             [self.playGbm7b5 play];}
+        else if ([self.selectChord3.text isEqualToString:@"F#"]) {
+            [self.playGbmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"F#m"]) {
+            [self.playGbminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"F#m7b5"]) {
+            [self.playGbm7b5 play];}
         else if ([self.selectChord3.text isEqualToString:@"G"]) {
             [self.playGmajor play];}
         else if ([self.selectChord3.text isEqualToString:@"Gm"]) {
             [self.playGminor play];}
         else if ([self.selectChord3.text isEqualToString:@"Gm7b5"]) {
             [self.playGm7b5 play];}
+        else if ([self.selectChord3.text isEqualToString:@"G#"]) {
+            [self.playAbmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"G#m"]) {
+            [self.playAbminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"G#m7b5"]) {
+            [self.playAbm7b5 play];}
         else if ([self.selectChord3.text isEqualToString:@"Ab"]) {
             [self.playAbmajor play];}
         else if ([self.selectChord3.text isEqualToString:@"Abm"]) {
@@ -444,6 +523,12 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playAminor play];}
         else if ([self.selectChord3.text isEqualToString:@"Am7b5"]) {
             [self.playAm7b5 play];}
+        else if ([self.selectChord3.text isEqualToString:@"A#"]) {
+            [self.playBbmajor play];}
+        else if ([self.selectChord3.text isEqualToString:@"A#m"]) {
+            [self.playBbminor play];}
+        else if ([self.selectChord3.text isEqualToString:@"A#m7b5"]) {
+            [self.playBbm7b5 play];}
         else if ([self.selectChord3.text isEqualToString:@"Bb"]) {
             [self.playBbmajor play];}
         else if ([self.selectChord3.text isEqualToString:@"Bbm"]) {
@@ -470,12 +555,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playDbminor play];}
         else if ([self.selectChord4.text isEqualToString:@"Dbm7b5"]) {
             [self.playDbm7b5 play];}
+        else if ([self.selectChord4.text isEqualToString:@"C#"]) {
+            [self.playDbmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"C#m"]) {
+            [self.playDbminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"C#m7b5"]) {
+            [self.playDbm7b5 play];}
         else if ([self.selectChord4.text isEqualToString:@"D"]) {
             [self.playDmajor play];}
         else if ([self.selectChord4.text isEqualToString:@"Dm"]) {
             [self.playDminor play];}
         else if ([self.selectChord4.text isEqualToString:@"Dm7b5"]) {
             [self.playDm7b5 play];}
+        else if ([self.selectChord4.text isEqualToString:@"D#"]) {
+            [self.playEbmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"D#m"]) {
+            [self.playEbminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"D#m7b5"]) {
+            [self.playEbm7b5 play];}
         else if ([self.selectChord4.text isEqualToString:@"Eb"]) {
             [self.playEbmajor play];}
         else if ([self.selectChord4.text isEqualToString:@"Ebm"]) {
@@ -500,12 +597,24 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playGbminor play];}
         else if ([self.selectChord4.text isEqualToString:@"Gbm7b5"]) {
             [self.playGbm7b5 play];}
+        else if ([self.selectChord4.text isEqualToString:@"F#"]) {
+            [self.playGbmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"F#m"]) {
+            [self.playGbminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"F#m7b5"]) {
+            [self.playGbm7b5 play];}
         else if ([self.selectChord4.text isEqualToString:@"G"]) {
             [self.playGmajor play];}
         else if ([self.selectChord4.text isEqualToString:@"Gm"]) {
             [self.playGminor play];}
         else if ([self.selectChord4.text isEqualToString:@"Gm7b5"]) {
             [self.playGm7b5 play];}
+        else if ([self.selectChord4.text isEqualToString:@"G#"]) {
+            [self.playAbmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"G#m"]) {
+            [self.playAbminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"G#m7b5"]) {
+            [self.playAbm7b5 play];}
         else if ([self.selectChord4.text isEqualToString:@"Ab"]) {
             [self.playAbmajor play];}
         else if ([self.selectChord4.text isEqualToString:@"Abm"]) {
@@ -518,6 +627,12 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playAminor play];}
         else if ([self.selectChord4.text isEqualToString:@"Am7b5"]) {
             [self.playAm7b5 play];}
+        else if ([self.selectChord4.text isEqualToString:@"A#"]) {
+            [self.playBbmajor play];}
+        else if ([self.selectChord4.text isEqualToString:@"A#m"]) {
+            [self.playBbminor play];}
+        else if ([self.selectChord4.text isEqualToString:@"A#m7b5"]) {
+            [self.playBbm7b5 play];}
         else if ([self.selectChord4.text isEqualToString:@"Bb"]) {
             [self.playBbmajor play];}
         else if ([self.selectChord4.text isEqualToString:@"Bbm"]) {
@@ -530,11 +645,12 @@ numberOfRowsInComponent:(NSInteger)component{
             [self.playBminor play];}
         else if ([self.selectChord4.text isEqualToString:@"Bm7b5"]) {
             [self.playBm7b5 play];}
-
     }
     self.chordLoop++;
     if (self.chordLoop > 3)
         self.chordLoop = 0;
+    
+    
 
 }
                   

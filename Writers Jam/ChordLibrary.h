@@ -23,5 +23,6 @@
 @property (strong, nonatomic) NSArray *Amajor;
 @property (strong, nonatomic) NSArray *Bbmajor;
 @property (strong, nonatomic) NSArray *Bmajor;
+@property (strong, nonatomic) NSArray *AllChords;
 
 @end
