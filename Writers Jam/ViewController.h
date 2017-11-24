@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ChordLibrary.h"
 #import <AVFoundation/AVFoundation.h>
+#import "KeyController.h"
 
 @interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UIPickerView *chordPicker;
-@property (strong, nonatomic) NSArray *CmajorKey;
-@property (strong, nonatomic) NSString *setKey;
+//@property ChordLibrary *setKey;
+
 
 
 //chord selection properties
@@ -35,6 +36,14 @@
 - (IBAction)clearChord2:(UIButton *)sender;
 - (IBAction)clearChord3:(UIButton *)sender;
 - (IBAction)clearChord4:(UIButton *)sender;
+
+//key related objects
+@property (strong, nonatomic) NSArray *keySignatureToPass;
+@property (strong, nonatomic) NSArray *keySignature;
+@property (strong, nonatomic) IBOutlet UILabel *keyLabel;
+@property (strong, nonatomic) NSString *keyToPass;
+
+- (IBAction)pickKey:(UIButton *)sender;
 
 
 

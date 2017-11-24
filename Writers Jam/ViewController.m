@@ -17,10 +17,14 @@
     [super viewDidLoad];
     [self setupAudioPlayers];
     [self tempoSliderDidMove:self.tempoSlider];
+    self.playing = NO;
+    [self.timer invalidate];
+    self.chordLoop = 0;
+    self.keyLabel.text = self.keyToPass;
+    self.keySignature = self.keySignatureToPass;
     
-    
-    self.CmajorKey  = [[NSArray alloc] initWithObjects:@"C",@"Dm",@"Em",@"F",@"G",@"Am",@"Bm7b5", nil];
-
+    //self.setKey = [[ChordLibrary alloc] init];
+    //self.setKey.Cmajor;
 
 
     //using UIPickerView as input for the chords
@@ -66,7 +70,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component{
     
-    return [self.CmajorKey count];
+    return [self.keySignature count];
     
 }
 
@@ -74,7 +78,7 @@ numberOfRowsInComponent:(NSInteger)component{
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component{
 
-        return [self.CmajorKey objectAtIndex:row];
+        return [self.keySignature objectAtIndex:row];
     
 }
 
@@ -86,13 +90,13 @@ numberOfRowsInComponent:(NSInteger)component{
     
     //update each textfield with pickerview input
     if (pickerView.tag == 1){
-        self.selectChord1.text = _CmajorKey[row];
+        self.selectChord1.text = self.keySignature[row];
     } else if (pickerView.tag == 2){
-        self.selectChord2.text = _CmajorKey[row];
+        self.selectChord2.text = self.keySignature[row];
     } else if (pickerView.tag == 3){
-        self.selectChord3.text = _CmajorKey[row];
+        self.selectChord3.text = self.keySignature[row];
     } else if (pickerView.tag == 4){
-        self.selectChord4.text = _CmajorKey[row];
+        self.selectChord4.text = self.keySignature[row];
     }
     
     
@@ -128,28 +132,29 @@ numberOfRowsInComponent:(NSInteger)component{
 - (IBAction)randomAllPressed:(UIButton *)sender {
     }
 
+//code to randomize picker from stackoverflow
 - (IBAction)randomChord1:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    NSUInteger random = arc4random_uniform(self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
-        self.selectChord1.text = _CmajorKey[random];
+        self.selectChord1.text = self.keySignature[random];
 }
 
 - (IBAction)randomChord2:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    NSUInteger random = arc4random_uniform(self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
-    self.selectChord2.text = _CmajorKey[random];
+    self.selectChord2.text = self.keySignature[random];
 }
 
 - (IBAction)randomChord3:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    NSUInteger random = arc4random_uniform(self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
-    self.selectChord3.text = _CmajorKey[random];
+    self.selectChord3.text = self.keySignature[random];
 }
 
 - (IBAction)randomChord4:(UIButton *)sender {
-    NSUInteger random = arc4random_uniform(_CmajorKey.count);
+    NSUInteger random = arc4random_uniform(self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
-    self.selectChord4.text = _CmajorKey[random];
+    self.selectChord4.text = self.keySignature[random];
 }
 
 - (IBAction)clearAll:(UIButton *)sender {
@@ -337,4 +342,6 @@ numberOfRowsInComponent:(NSInteger)component{
     [self.playBm7b5 prepareToPlay];
 }
 
+- (IBAction)pickKey:(UIButton *)sender {
+}
 @end
