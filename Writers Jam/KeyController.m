@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
         self.setKey = [[ChordLibrary alloc] init];
 }
 
@@ -49,30 +49,51 @@
 
 - (IBAction)selectedC:(UIButton *)sender {
         self.selectedKey.text = @"C";
-        self.keySignature = self.setKey.Cmajor; }
+        self.keySignature = self.setKey.Cmajor;
+}
 - (IBAction)selectedDb:(UIButton *)sender {
-        self.selectedKey.text = @"Db";}
+        self.selectedKey.text = @"Db";
+        self.keySignature = self.setKey.Dbmajor;
+}
 - (IBAction)selectedD:(UIButton *)sender {
         self.selectedKey.text = @"D";
-        self.keySignature = self.setKey.Dmajor;}
+        self.keySignature = self.setKey.Dmajor;
+}
 - (IBAction)selectedEb:(UIButton *)sender {
-        self.selectedKey.text = @"Eb";}
+        self.selectedKey.text = @"Eb";
+        self.keySignature = self.setKey.Ebmajor;
+}
 - (IBAction)selectedE:(UIButton *)sender {
-        self.selectedKey.text = @"E";}
+        self.selectedKey.text = @"E";
+        self.keySignature = self.setKey.Emajor;
+}
 - (IBAction)selectedF:(UIButton *)sender {
-        self.selectedKey.text = @"F";}
+        self.selectedKey.text = @"F";
+        self.keySignature = self.setKey.Fmajor;
+}
 - (IBAction)selectedGb:(UIButton *)sender {
-        self.selectedKey.text = @"Gb";}
+        self.selectedKey.text = @"Gb";
+        self.keySignature = self.setKey.Gbmajor;
+}
 - (IBAction)selectedG:(UIButton *)sender {
-        self.selectedKey.text = @"G";}
+        self.selectedKey.text = @"G";
+        self.keySignature = self.setKey.Gmajor;
+}
 - (IBAction)selectedAb:(UIButton *)sender {
-        self.selectedKey.text = @"Ab";}
+        self.selectedKey.text = @"Ab";
+        self.keySignature = self.setKey.Abmajor;
+}
 - (IBAction)selectedA:(UIButton *)sender {
-        self.selectedKey.text = @"A";}
+        self.selectedKey.text = @"A";
+        self.keySignature = self.setKey.Amajor;
+}
 - (IBAction)selectedBb:(UIButton *)sender {
-        self.selectedKey.text = @"Bb";}
+        self.selectedKey.text = @"Bb";
+        self.keySignature = self.setKey.Bbmajor;
+}
 - (IBAction)selectedB:(UIButton *)sender {
         self.selectedKey.text = @"B";
+        self.keySignature = self.setKey.Bmajor;
     
     
 }
