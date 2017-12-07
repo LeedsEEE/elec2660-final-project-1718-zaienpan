@@ -20,10 +20,10 @@
     self.playing = NO;
     [self.timer invalidate];
     self.chordLoop = 0;
-    self.keyLabel.text = self.keyToPass;
-    self.keySignature = self.keySignatureToPass;
+    self.keyLabel.text = self.keyToPass;         //data from keycontroller
+    self.keySignature = self.keySignatureToPass; //data from keycontroller
     
-    //using UIPickerView as input for the chords
+    //using UIPickerView as input for each textfield, code from stackoverflow
     UIPickerView *chordPicker = [[UIPickerView alloc] init];
     chordPicker.delegate = self;
     chordPicker.tag = 1;
@@ -51,12 +51,12 @@
 
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark pickerView setup
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     
     return 1;
@@ -82,9 +82,7 @@ numberOfRowsInComponent:(NSInteger)component{
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
     
-    //NSLog(@"Selected Row %ld", (long)row);
-    
-    //update each textfield with pickerview input
+    //update each textfield with selected pickerview input
     if (pickerView.tag == 1){
         self.selectChord1.text = self.keySignature[row];
     } else if (pickerView.tag == 2){
@@ -98,7 +96,7 @@ numberOfRowsInComponent:(NSInteger)component{
     
 }
 
-//touch anywhere to dismiss keyboard/pickerview from stackoverflow
+//touch anywhere to dismiss keyboard/pickerview, code from stackoverflow
 - (void)touchesBegan:(NSSet<UITouch *> *)touches
            withEvent:(UIEvent *)event {
     [self.view endEditing:YES];}
@@ -131,8 +129,8 @@ numberOfRowsInComponent:(NSInteger)component{
 - (IBAction)randomAllPressed:(UIButton *)sender {
     }
 
-#pragma mark randomize and clear buttons
-//code to randomize picker from stackoverflow
+#pragma mark Randomize/Clear buttons UI
+// obtain randomized picker output, code from stackoverflow
 - (IBAction)randomChord1:(UIButton *)sender {
     NSUInteger random = arc4random_uniform((uint32_t) self.keySignature.count);
     [_chordPicker selectRow:random inComponent:0 animated:YES];
@@ -180,7 +178,7 @@ numberOfRowsInComponent:(NSInteger)component{
 - (IBAction)pickKey:(UIButton *)sender {
     self.playing = NO;
     [self.timer invalidate];
-    self.chordLoop = 0;
+    self.chordLoop = 0; //resets playback when selecting key
 }
 
 - (IBAction)didPressPlay:(UIButton *)sender {
@@ -196,27 +194,27 @@ numberOfRowsInComponent:(NSInteger)component{
     self.playing = NO;
     [self.timer invalidate];
     self.chordLoop = 0;
-    self.didPressPlay.enabled = YES;
+    self.didPressPlay.enabled = YES; //reenables play button after stopping
 
 }
 
 
 - (void) timerFire:(NSTimer *)timer {
     NSLog(@"Timer Fired! chord %ld", (long)self.chordLoop);
-        NSLog(@"%@", _selectChord1);
     
+    //tag each textfield
     self.selectChord1.tag = 0;
     self.selectChord2.tag = 1;
     self.selectChord3.tag = 2;
     self.selectChord4.tag = 3;
     
-    //flash the chord changes according to its active box
+    //flash the textfield if it is active
     if (self.selectChord1.tag == self.chordLoop){
-        self.selectChord1.backgroundColor = [UIColor yellowColor];}
-    else {
+        self.selectChord1.backgroundColor = [UIColor yellowColor];
+    } else {
         self.selectChord1.backgroundColor = [UIColor whiteColor];
-            }
-    
+    }
+
     if (self.selectChord2.tag == self.chordLoop){
         self.selectChord2.backgroundColor = [UIColor yellowColor];
     } else { self.selectChord2.backgroundColor = [UIColor whiteColor];
@@ -842,13 +840,5 @@ numberOfRowsInComponent:(NSInteger)component{
     [self.playBm7b5 prepareToPlay];
 
 }
-
-//-(void)insert:(NSString *) variable
-//{
-//    
-//    self.selectChord1.text = variable;
-//
-//    NSLog(@"%@",variable);
-//}
 
 @end
