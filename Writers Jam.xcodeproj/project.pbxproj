@@ -239,7 +239,6 @@
 				A3E0DB051FBC8D82003E68A5 /* LaunchScreen.storyboard */,
 				A3E0DB081FBC8D82003E68A5 /* Info.plist */,
 				A3A96EE71FC46CDD00C381B5 /* Audio Samples */,
-				A3E0DB2F1FBDDC09003E68A5 /* Images */,
 				A3E0DAF71FBC8D82003E68A5 /* Supporting Files */,
 			);
 			path = "Writers Jam";
@@ -277,13 +276,6 @@
 				A3E0DB2B1FBDD3D9003E68A5 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A3E0DB2F1FBDDC09003E68A5 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
