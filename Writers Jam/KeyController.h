@@ -25,6 +25,9 @@
 
 
 - (IBAction)majorMinorSwitch:(UISwitch *)sender;
+@property (strong, nonatomic) IBOutlet UISwitch *majorMinorSwitch;
+
+
 - (IBAction)selectedC:(UIButton *)sender;
 - (IBAction)selectedDb:(UIButton *)sender;
 - (IBAction)selectedD:(UIButton *)sender;

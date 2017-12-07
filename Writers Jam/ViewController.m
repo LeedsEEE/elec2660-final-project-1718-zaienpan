@@ -82,7 +82,7 @@ numberOfRowsInComponent:(NSInteger)component{
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
     
-    NSLog(@"Selected Row %ld", (long)row);
+    //NSLog(@"Selected Row %ld", (long)row);
     
     //update each textfield with pickerview input
     if (pickerView.tag == 1){
@@ -103,13 +103,16 @@ numberOfRowsInComponent:(NSInteger)component{
            withEvent:(UIEvent *)event {
     [self.view endEditing:YES];}
 
+#pragma mark tempo related UI
 - (IBAction)tempoSliderDidMove:(UISlider *)sender {
     self.BPM = self.tempoSlider.value;
     NSLog(@"BPM = %d", (int)self.BPM);
     self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
+    
+    if (self.playing == YES){
         [self.timer invalidate];
         [self didPressPlay:nil];
-    
+    }
 }
 
 - (IBAction)tempoPlus:(UIButton *)sender {
@@ -124,9 +127,11 @@ numberOfRowsInComponent:(NSInteger)component{
         self.tempoLabel.text = [NSString stringWithFormat:@"%d", (int)self.BPM];
 }
 
+
 - (IBAction)randomAllPressed:(UIButton *)sender {
     }
 
+#pragma mark randomize and clear buttons
 //code to randomize picker from stackoverflow
 - (IBAction)randomChord1:(UIButton *)sender {
     NSUInteger random = arc4random_uniform((uint32_t) self.keySignature.count);
@@ -179,11 +184,9 @@ numberOfRowsInComponent:(NSInteger)component{
 }
 
 - (IBAction)didPressPlay:(UIButton *)sender {
-
-    NSLog(@"Pressed Play %ld", sender.tag);
-    if(self.playing==NO){
+    NSLog(@"Pressed Play");
+    self.playing = YES;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.BPM target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
-    }
     ((UIButton *)sender).enabled = NO; //disables second pressing
     
 }
@@ -200,31 +203,32 @@ numberOfRowsInComponent:(NSInteger)component{
 
 - (void) timerFire:(NSTimer *)timer {
     NSLog(@"Timer Fired! chord %ld", (long)self.chordLoop);
-        //NSLog(@"%@",self.selectChord1.text);
+        NSLog(@"%@", _selectChord1);
     
     self.selectChord1.tag = 0;
     self.selectChord2.tag = 1;
     self.selectChord3.tag = 2;
     self.selectChord4.tag = 3;
     
+    //flash the chord changes according to its active box
     if (self.selectChord1.tag == self.chordLoop){
-        self.selectChord1.backgroundColor = [UIColor orangeColor];}
+        self.selectChord1.backgroundColor = [UIColor yellowColor];}
     else {
         self.selectChord1.backgroundColor = [UIColor whiteColor];
             }
     
     if (self.selectChord2.tag == self.chordLoop){
-        self.selectChord2.backgroundColor = [UIColor orangeColor];
+        self.selectChord2.backgroundColor = [UIColor yellowColor];
     } else { self.selectChord2.backgroundColor = [UIColor whiteColor];
     }
     
     if (self.selectChord3.tag == self.chordLoop){
-        self.selectChord3.backgroundColor = [UIColor orangeColor];
+        self.selectChord3.backgroundColor = [UIColor yellowColor];
     } else { self.selectChord3.backgroundColor = [UIColor whiteColor];
     }
     
     if (self.selectChord4.tag == self.chordLoop){
-        self.selectChord4.backgroundColor = [UIColor orangeColor];
+        self.selectChord4.backgroundColor = [UIColor yellowColor];
     } else { self.selectChord4.backgroundColor = [UIColor whiteColor];
     }
     
@@ -838,5 +842,13 @@ numberOfRowsInComponent:(NSInteger)component{
     [self.playBm7b5 prepareToPlay];
 
 }
+
+//-(void)insert:(NSString *) variable
+//{
+//    
+//    self.selectChord1.text = variable;
+//
+//    NSLog(@"%@",variable);
+//}
 
 @end

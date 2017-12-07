@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
 
         self.setKey = [[ChordLibrary alloc] init];
+        [self.selectedKey setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,51 +86,99 @@
 }
 
 - (IBAction)selectedC:(UIButton *)sender {
-        self.selectedKey.text = @"C";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"C major";
+    } else {
+        self.selectedKey.text = @"A minor";
+    }
         self.keySignature = self.setKey.Cmajor;
 }
 - (IBAction)selectedDb:(UIButton *)sender {
-        self.selectedKey.text = @"Db";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"Db major";
+    } else {
+        self.selectedKey.text = @"Bb minor";
+    }
         self.keySignature = self.setKey.Dbmajor;
 }
 - (IBAction)selectedD:(UIButton *)sender {
-        self.selectedKey.text = @"D";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"D major";
+    } else {
+        self.selectedKey.text = @"B minor";
+    }
         self.keySignature = self.setKey.Dmajor;
 }
 - (IBAction)selectedEb:(UIButton *)sender {
-        self.selectedKey.text = @"Eb";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"Eb major";
+    } else {
+        self.selectedKey.text = @"C minor";
+    }
         self.keySignature = self.setKey.Ebmajor;
 }
 - (IBAction)selectedE:(UIButton *)sender {
-        self.selectedKey.text = @"E";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"E major";
+    } else {
+        self.selectedKey.text = @"C# minor";
+    }
         self.keySignature = self.setKey.Emajor;
 }
 - (IBAction)selectedF:(UIButton *)sender {
-        self.selectedKey.text = @"F";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"F major";
+    } else {
+        self.selectedKey.text = @"D minor";
+    }
         self.keySignature = self.setKey.Fmajor;
 }
 - (IBAction)selectedGb:(UIButton *)sender {
-        self.selectedKey.text = @"Gb";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"Gb major";
+    } else {
+        self.selectedKey.text = @"Eb minor";
+    }
         self.keySignature = self.setKey.Gbmajor;
 }
 - (IBAction)selectedG:(UIButton *)sender {
-        self.selectedKey.text = @"G";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"G major";
+    } else {
+        self.selectedKey.text = @"E minor";
+    }
         self.keySignature = self.setKey.Gmajor;
 }
 - (IBAction)selectedAb:(UIButton *)sender {
-        self.selectedKey.text = @"Ab";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"Ab major";
+    } else {
+        self.selectedKey.text = @"F minor";
+    }
         self.keySignature = self.setKey.Abmajor;
 }
 - (IBAction)selectedA:(UIButton *)sender {
-        self.selectedKey.text = @"A";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"A major";
+    } else {
+        self.selectedKey.text = @"F# minor";
+    }
         self.keySignature = self.setKey.Amajor;
 }
 - (IBAction)selectedBb:(UIButton *)sender {
-        self.selectedKey.text = @"Bb";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"Bb major";
+    } else {
+        self.selectedKey.text = @"G minor";
+    }
         self.keySignature = self.setKey.Bbmajor;
 }
 - (IBAction)selectedB:(UIButton *)sender {
-        self.selectedKey.text = @"B";
+    if (self.majorMinorSwitch.on) {
+        self.selectedKey.text = @"B major";
+    } else {
+        self.selectedKey.text = @"G# minor";
+    }
         self.keySignature = self.setKey.Bmajor;
     
     

@@ -25,6 +25,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *selectChord2;
 @property (strong, nonatomic) IBOutlet UITextField *selectChord3;
 @property (strong, nonatomic) IBOutlet UITextField *selectChord4;
+
+
+
 - (IBAction)randomAllPressed:(UIButton *)sender;
 - (IBAction)randomChord1:(UIButton *)sender;
 - (IBAction)randomChord2:(UIButton *)sender;
@@ -45,8 +48,7 @@
 
 - (IBAction)pickKey:(UIButton *)sender;
 
-
-
+@property (strong, nonatomic) NSString *currentTextField;
 
 //tempo related objects and properties
 @property BOOL playing;
