@@ -1,7 +1,8 @@
 # elec2660-final-project-1718-zaienpan
 elec2660-final-project-1718-zaienpan created by GitHub Classroom
 
-Project Title: Writer's Jam
+Project Title: Writer's Jam 
+
 This app is designed to provide composers with a "quick method" of picking chords for their song.
 It is simple to operate.
 First, the user selects a key signature,
