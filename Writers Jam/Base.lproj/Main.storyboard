@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="60" id="xc0-zk-c32"/>
                                 </constraints>
                                 <color key="textColor" red="0.42284255622080474" green="0.6516012130790575" blue="0.46108436687043014" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="selectChord1:" destination="BYZ-38-t0r" eventType="valueChanged" id="qlS-gw-Dvu"/>
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="width" constant="80" id="wja-Pd-A2V"/>
                                 </constraints>
                                 <color key="textColor" red="0.42284255622080474" green="0.6516012130790575" blue="0.46108436687043014" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnn-MR-dyz">
@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="60" id="rfh-Ok-MBH"/>
                                 </constraints>
                                 <color key="textColor" red="0.42284255622080474" green="0.6516012130790575" blue="0.46108436687043014" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B95-U8-q6M">
@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="width" constant="80" id="ubc-8T-4uH"/>
                                 </constraints>
                                 <color key="textColor" red="0.42284255622080474" green="0.6516012130790575" blue="0.46108436687043014" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="40" maxValue="240" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-9f-K0d">

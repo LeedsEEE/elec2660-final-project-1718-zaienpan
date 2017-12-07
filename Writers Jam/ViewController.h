@@ -104,7 +104,10 @@
 @property (strong, nonatomic) AVAudioPlayer *playBminor;
 @property (strong, nonatomic) AVAudioPlayer *playBm7b5;
 
-
+@property (strong, nonatomic) AVAudioPlayer *playChord1;
+@property (strong, nonatomic) AVAudioPlayer *playChord2;
+@property (strong, nonatomic) AVAudioPlayer *playChord3;
+@property (strong, nonatomic) AVAudioPlayer *playChord4;
 
 
 @end
