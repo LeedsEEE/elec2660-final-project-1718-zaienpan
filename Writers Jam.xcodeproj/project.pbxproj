@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3244DA41FD9C0BB006D346F /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244D9B1FD9C0BB006D346F /* Icon-App-20x20@2x.png */; };
+		A3244DA51FD9C0BB006D346F /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244D9C1FD9C0BB006D346F /* Icon-App-29x29@1x.png */; };
+		A3244DA61FD9C0BB006D346F /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244D9D1FD9C0BB006D346F /* Icon-App-29x29@2x.png */; };
+		A3244DA71FD9C0BB006D346F /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244D9E1FD9C0BB006D346F /* Icon-App-29x29@3x.png */; };
+		A3244DA81FD9C0BB006D346F /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244D9F1FD9C0BB006D346F /* Icon-App-40x40@2x.png */; };
+		A3244DA91FD9C0BB006D346F /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DA01FD9C0BB006D346F /* Icon-App-60x60@2x.png */; };
+		A3244DAA1FD9C0BB006D346F /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DA11FD9C0BB006D346F /* Icon-App-60x60@3x.png */; };
+		A3244DAB1FD9C0BB006D346F /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DA21FD9C0BB006D346F /* Icon-App-76x76@1x.png */; };
+		A3244DAC1FD9C0BB006D346F /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DA31FD9C0BB006D346F /* Icon-App-76x76@2x.png */; };
+		A3244DAF1FD9C464006D346F /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DAE1FD9C464006D346F /* Icon-App-20x20@3x.png */; };
+		A3244DB11FD9C48E006D346F /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DB01FD9C48E006D346F /* Icon-App-40x40@3x.png */; };
+		A3244DB51FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DB41FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png */; };
+		A3244DB71FD9C52B006D346F /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DB61FD9C52B006D346F /* Icon-App-20x20@1x.png */; };
+		A3244DB91FD9C547006D346F /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DB81FD9C547006D346F /* Icon-App-40x40@1x.png */; };
 		A3BE44591FC87DF700324B51 /* Gminor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3BE44351FC87DF700324B51 /* Gminor.wav */; };
 		A3BE445A1FC87DF700324B51 /* Gmajor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3BE44361FC87DF700324B51 /* Gmajor.wav */; };
 		A3BE445B1FC87DF700324B51 /* Gm7b5.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3BE44371FC87DF700324B51 /* Gm7b5.wav */; };
@@ -74,6 +88,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3244D9B1FD9C0BB006D346F /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@2x.png"; path = "AppIcons/Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		A3244D9C1FD9C0BB006D346F /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@1x.png"; path = "AppIcons/Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		A3244D9D1FD9C0BB006D346F /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@2x.png"; path = "AppIcons/Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		A3244D9E1FD9C0BB006D346F /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@3x.png"; path = "AppIcons/Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		A3244D9F1FD9C0BB006D346F /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@2x.png"; path = "AppIcons/Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		A3244DA01FD9C0BB006D346F /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@2x.png"; path = "AppIcons/Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		A3244DA11FD9C0BB006D346F /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@3x.png"; path = "AppIcons/Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		A3244DA21FD9C0BB006D346F /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@1x.png"; path = "AppIcons/Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		A3244DA31FD9C0BB006D346F /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@2x.png"; path = "AppIcons/Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		A3244DAE1FD9C464006D346F /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@3x.png"; path = "AppIcons/Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		A3244DB01FD9C48E006D346F /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@3x.png"; path = "AppIcons/Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		A3244DB41FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "AppIcons/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		A3244DB61FD9C52B006D346F /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@1x.png"; path = "AppIcons/Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		A3244DB81FD9C547006D346F /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@1x.png"; path = "AppIcons/Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
 		A3BE44351FC87DF700324B51 /* Gminor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Gminor.wav; path = "Audio Samples/Gminor.wav"; sourceTree = "<group>"; };
 		A3BE44361FC87DF700324B51 /* Gmajor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Gmajor.wav; path = "Audio Samples/Gmajor.wav"; sourceTree = "<group>"; };
 		A3BE44371FC87DF700324B51 /* Gm7b5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Gm7b5.wav; path = "Audio Samples/Gm7b5.wav"; sourceTree = "<group>"; };
@@ -159,6 +187,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3244DAD1FD9C0DE006D346F /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				A3244DB61FD9C52B006D346F /* Icon-App-20x20@1x.png */,
+				A3244D9B1FD9C0BB006D346F /* Icon-App-20x20@2x.png */,
+				A3244DAE1FD9C464006D346F /* Icon-App-20x20@3x.png */,
+				A3244D9C1FD9C0BB006D346F /* Icon-App-29x29@1x.png */,
+				A3244D9D1FD9C0BB006D346F /* Icon-App-29x29@2x.png */,
+				A3244D9E1FD9C0BB006D346F /* Icon-App-29x29@3x.png */,
+				A3244DB81FD9C547006D346F /* Icon-App-40x40@1x.png */,
+				A3244D9F1FD9C0BB006D346F /* Icon-App-40x40@2x.png */,
+				A3244DB01FD9C48E006D346F /* Icon-App-40x40@3x.png */,
+				A3244DA01FD9C0BB006D346F /* Icon-App-60x60@2x.png */,
+				A3244DA11FD9C0BB006D346F /* Icon-App-60x60@3x.png */,
+				A3244DA21FD9C0BB006D346F /* Icon-App-76x76@1x.png */,
+				A3244DA31FD9C0BB006D346F /* Icon-App-76x76@2x.png */,
+				A3244DB41FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png */,
+			);
+			name = AppIcons;
+			sourceTree = "<group>";
+		};
 		A3A96EE71FC46CDD00C381B5 /* Audio Samples */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +287,7 @@
 				A3E0DB031FBC8D82003E68A5 /* Assets.xcassets */,
 				A3E0DB051FBC8D82003E68A5 /* LaunchScreen.storyboard */,
 				A3E0DB081FBC8D82003E68A5 /* Info.plist */,
+				A3244DAD1FD9C0DE006D346F /* AppIcons */,
 				A3A96EE71FC46CDD00C381B5 /* Audio Samples */,
 				A3E0DAF71FBC8D82003E68A5 /* Supporting Files */,
 			);
@@ -392,9 +442,12 @@
 				A3BE446F1FC87DF700324B51 /* Cmajor.wav in Resources */,
 				A3BE44711FC87DF700324B51 /* Bminor.wav in Resources */,
 				A3BE44701FC87DF700324B51 /* Cm7b5.wav in Resources */,
+				A3244DAC1FD9C0BB006D346F /* Icon-App-76x76@2x.png in Resources */,
+				A3244DA61FD9C0BB006D346F /* Icon-App-29x29@2x.png in Resources */,
 				A3BE44771FC87DF700324B51 /* Aminor.wav in Resources */,
 				A3BE44631FC87DF700324B51 /* Emajor.wav in Resources */,
 				A3BE445F1FC87DF700324B51 /* Fminor.wav in Resources */,
+				A3244DB71FD9C52B006D346F /* Icon-App-20x20@1x.png in Resources */,
 				A3BE44651FC87DF700324B51 /* Ebminor.wav in Resources */,
 				A3BE44611FC87DF700324B51 /* Fm7b5.wav in Resources */,
 				A3BE445D1FC87DF700324B51 /* Gbmajor.wav in Resources */,
@@ -402,22 +455,33 @@
 				A3BE44621FC87DF700324B51 /* Eminor.wav in Resources */,
 				A3BE44591FC87DF700324B51 /* Gminor.wav in Resources */,
 				A3BE44671FC87DF700324B51 /* Ebm7b5.wav in Resources */,
+				A3244DA41FD9C0BB006D346F /* Icon-App-20x20@2x.png in Resources */,
 				A3BE446A1FC87DF700324B51 /* Dm7b5.wav in Resources */,
+				A3244DAA1FD9C0BB006D346F /* Icon-App-60x60@3x.png in Resources */,
 				A3BE446E1FC87DF700324B51 /* Cminor.wav in Resources */,
 				A3BE44741FC87DF700324B51 /* Bbminor.wav in Resources */,
+				A3244DA51FD9C0BB006D346F /* Icon-App-29x29@1x.png in Resources */,
 				A3E0DB071FBC8D82003E68A5 /* LaunchScreen.storyboard in Resources */,
 				A3BE44721FC87DF700324B51 /* Bmajor.wav in Resources */,
+				A3244DA81FD9C0BB006D346F /* Icon-App-40x40@2x.png in Resources */,
 				A3BE44681FC87DF700324B51 /* Dminor.wav in Resources */,
 				A3BE447A1FC87DF700324B51 /* Abminor.wav in Resources */,
+				A3244DB51FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png in Resources */,
 				A3BE44731FC87DF700324B51 /* Bm7b5.wav in Resources */,
 				A3BE44691FC87DF700324B51 /* Dmajor.wav in Resources */,
 				A3BE446C1FC87DF700324B51 /* Dbmajor.wav in Resources */,
 				A3BE44601FC87DF700324B51 /* Fmajor.wav in Resources */,
+				A3244DB11FD9C48E006D346F /* Icon-App-40x40@3x.png in Resources */,
+				A3244DA71FD9C0BB006D346F /* Icon-App-29x29@3x.png in Resources */,
 				A3BE446B1FC87DF700324B51 /* Dbminor.wav in Resources */,
+				A3244DAF1FD9C464006D346F /* Icon-App-20x20@3x.png in Resources */,
 				A3BE445A1FC87DF700324B51 /* Gmajor.wav in Resources */,
+				A3244DAB1FD9C0BB006D346F /* Icon-App-76x76@1x.png in Resources */,
+				A3244DA91FD9C0BB006D346F /* Icon-App-60x60@2x.png in Resources */,
 				A3BE44781FC87DF700324B51 /* Amajor.wav in Resources */,
 				A3BE44761FC87DF700324B51 /* Bbm7b5.wav in Resources */,
 				A3BE445B1FC87DF700324B51 /* Gm7b5.wav in Resources */,
+				A3244DB91FD9C547006D346F /* Icon-App-40x40@1x.png in Resources */,
 				A3E0DB041FBC8D82003E68A5 /* Assets.xcassets in Resources */,
 				A3BE445C1FC87DF700324B51 /* Gbminor.wav in Resources */,
 				A3BE447C1FC87DF700324B51 /* Abm7b5.wav in Resources */,
