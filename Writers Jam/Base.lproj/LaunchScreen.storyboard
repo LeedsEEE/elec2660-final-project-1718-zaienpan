@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,14 +34,21 @@
                                 <color key="textColor" red="0.62144450259999995" green="0.95962231909999995" blue="0.6643685211" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="writersjams.png" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-3m-aj4">
+                                <rect key="frame" x="56" y="170" width="262" height="126"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2138901178" green="0.2040234813" blue="0.29971148800000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="v25-5a-rPG" firstAttribute="top" secondItem="xbj-3m-aj4" secondAttribute="bottom" constant="8" symbolic="YES" id="BOy-jX-Utg"/>
+                            <constraint firstItem="xbj-3m-aj4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="40" id="DQ5-MT-kCA"/>
                             <constraint firstItem="aZX-GU-Pht" firstAttribute="centerX" secondItem="v25-5a-rPG" secondAttribute="centerX" id="DYm-gs-BJx"/>
                             <constraint firstItem="v25-5a-rPG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="EAZ-j5-xbj"/>
+                            <constraint firstItem="xbj-3m-aj4" firstAttribute="centerX" secondItem="v25-5a-rPG" secondAttribute="centerX" id="GAs-hJ-GPN"/>
                             <constraint firstItem="aZX-GU-Pht" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Jqa-Jy-ddC"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="aZX-GU-Pht" secondAttribute="bottom" constant="290" id="hxp-5h-Pm6"/>
                             <constraint firstItem="v25-5a-rPG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lxt-vT-egw"/>
+                            <constraint firstItem="xbj-3m-aj4" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="150" id="z1S-au-jbu"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,4 +57,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="writersjams.png" width="1048" height="506"/>
+    </resources>
 </document>

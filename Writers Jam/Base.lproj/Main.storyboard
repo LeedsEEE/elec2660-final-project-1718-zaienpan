@@ -507,7 +507,7 @@
                                     <action selector="selectedF:" destination="NBy-wv-g8G" eventType="touchUpInside" id="EBa-mr-zVX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*select a Key " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJj-rS-yHW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select a Key from below " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJj-rS-yHW">
                                 <rect key="frame" x="25" y="141" width="325" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="325" id="g1M-T6-W65"/>

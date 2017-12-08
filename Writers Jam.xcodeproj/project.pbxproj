@@ -21,6 +21,7 @@
 		A3244DB51FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DB41FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png */; };
 		A3244DB71FD9C52B006D346F /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DB61FD9C52B006D346F /* Icon-App-20x20@1x.png */; };
 		A3244DB91FD9C547006D346F /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3244DB81FD9C547006D346F /* Icon-App-40x40@1x.png */; };
+		A3588F381FDA3C6300FCA231 /* writersjams.png in Resources */ = {isa = PBXBuildFile; fileRef = A3588F371FDA3C6300FCA231 /* writersjams.png */; };
 		A3BE44591FC87DF700324B51 /* Gminor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3BE44351FC87DF700324B51 /* Gminor.wav */; };
 		A3BE445A1FC87DF700324B51 /* Gmajor.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3BE44361FC87DF700324B51 /* Gmajor.wav */; };
 		A3BE445B1FC87DF700324B51 /* Gm7b5.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3BE44371FC87DF700324B51 /* Gm7b5.wav */; };
@@ -105,6 +106,7 @@
 		A3244DB41FD9C4FA006D346F /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "AppIcons/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
 		A3244DB61FD9C52B006D346F /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@1x.png"; path = "AppIcons/Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
 		A3244DB81FD9C547006D346F /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@1x.png"; path = "AppIcons/Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		A3588F371FDA3C6300FCA231 /* writersjams.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = writersjams.png; path = Images/writersjams.png; sourceTree = "<group>"; };
 		A3BE44351FC87DF700324B51 /* Gminor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Gminor.wav; path = "Audio Samples/Gminor.wav"; sourceTree = "<group>"; };
 		A3BE44361FC87DF700324B51 /* Gmajor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Gmajor.wav; path = "Audio Samples/Gmajor.wav"; sourceTree = "<group>"; };
 		A3BE44371FC87DF700324B51 /* Gm7b5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Gm7b5.wav; path = "Audio Samples/Gm7b5.wav"; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				A3E700881FDA0FDD003EE684 /* Play_Button.png */,
 				A3E700891FDA0FDD003EE684 /* Stop_Button.png */,
 				A3E7008D1FDA1971003EE684 /* Start_Button.png */,
+				A3588F371FDA3C6300FCA231 /* writersjams.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				A3244DB91FD9C547006D346F /* Icon-App-40x40@1x.png in Resources */,
 				A3E0DB041FBC8D82003E68A5 /* Assets.xcassets in Resources */,
 				A3BE445C1FC87DF700324B51 /* Gbminor.wav in Resources */,
+				A3588F381FDA3C6300FCA231 /* writersjams.png in Resources */,
 				A3BE447C1FC87DF700324B51 /* Abm7b5.wav in Resources */,
 				A3E0DB021FBC8D82003E68A5 /* Main.storyboard in Resources */,
 				A3BE44661FC87DF700324B51 /* Ebmajor.wav in Resources */,
