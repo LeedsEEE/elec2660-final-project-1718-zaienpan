@@ -10,7 +10,8 @@
 
 @implementation ChordLibrary
 
-
+//initialise the arrays which contain the diatonic chords in each key signature
+//information to be used by KeyController to select a Key and display the array objects in pickerView
 - (instancetype)init
 {
     self = [super init];

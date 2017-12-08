@@ -34,7 +34,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Pass the selected key related objects to the view controller.
     ViewController *tempViewController = [segue destinationViewController];
     if ([segue.identifier isEqualToString:@"back"]) {
     tempViewController.keyToPass = self.selectedKey.text;
@@ -48,7 +48,7 @@
 - (IBAction)backButtonPressed:(UIButton *)sender {
 }
 
-
+//switch to change the text of the key selection from its major to its relative minor
 - (IBAction)majorMinorSwitch:(UISwitch *)sender {
     if (sender.on){
         self.majorOrMinor.text = @"Major";
@@ -85,13 +85,16 @@
     }
 }
 
+#pragma mark Selecting the Key
+
+
 - (IBAction)selectedC:(UIButton *)sender {
     if (self.majorMinorSwitch.on) {
         self.selectedKey.text = @"C major";
     } else {
         self.selectedKey.text = @"A minor";
     }
-        self.keySignature = self.setKey.Cmajor;
+        self.keySignature = self.setKey.Cmajor; //sets the key signature, which will be passed to main view and decide which diatonic chords are shown in the pickerView
 }
 - (IBAction)selectedDb:(UIButton *)sender {
     if (self.majorMinorSwitch.on) {
@@ -186,6 +189,7 @@
 
 - (IBAction)selectedNoKey:(UIButton *)sender {
     self.selectedKey.text = @"Free Mode";
-    self.keySignature = self.setKey.AllChords;
+    self.keySignature = self.setKey.AllChords; //sets the key signature to nothing, no restrictions on chords shown, which will allow for all the chords available
+
 }
 @end
