@@ -67,6 +67,9 @@
 		A3E0DB1D1FBC8D82003E68A5 /* Writers_JamUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DB1C1FBC8D82003E68A5 /* Writers_JamUITests.m */; };
 		A3E0DB2C1FBDD3D9003E68A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E0DB2B1FBDD3D9003E68A5 /* AVFoundation.framework */; };
 		A3E0DB321FBDF3C3003E68A5 /* ChordLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0DB311FBDF3C3003E68A5 /* ChordLibrary.m */; };
+		A3E7008A1FDA0FDD003EE684 /* Play_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E700881FDA0FDD003EE684 /* Play_Button.png */; };
+		A3E7008B1FDA0FDD003EE684 /* Stop_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E700891FDA0FDD003EE684 /* Stop_Button.png */; };
+		A3E7008E1FDA1971003EE684 /* Start_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E7008D1FDA1971003EE684 /* Start_Button.png */; };
 		DE37ECFF1FC4821000EF632C /* KeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE37ECFE1FC4821000EF632C /* KeyController.m */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +160,9 @@
 		A3E0DB2B1FBDD3D9003E68A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A3E0DB301FBDF3C3003E68A5 /* ChordLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordLibrary.h; sourceTree = "<group>"; };
 		A3E0DB311FBDF3C3003E68A5 /* ChordLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordLibrary.m; sourceTree = "<group>"; };
+		A3E700881FDA0FDD003EE684 /* Play_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Play_Button.png; path = Images/Play_Button.png; sourceTree = "<group>"; };
+		A3E700891FDA0FDD003EE684 /* Stop_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stop_Button.png; path = Images/Stop_Button.png; sourceTree = "<group>"; };
+		A3E7008D1FDA1971003EE684 /* Start_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Start_Button.png; path = Images/Start_Button.png; sourceTree = "<group>"; };
 		DE37ECFD1FC4821000EF632C /* KeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyController.h; sourceTree = "<group>"; };
 		DE37ECFE1FC4821000EF632C /* KeyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +293,7 @@
 				A3E0DB031FBC8D82003E68A5 /* Assets.xcassets */,
 				A3E0DB051FBC8D82003E68A5 /* LaunchScreen.storyboard */,
 				A3E0DB081FBC8D82003E68A5 /* Info.plist */,
+				A3E7008C1FDA0FE1003EE684 /* Images */,
 				A3244DAD1FD9C0DE006D346F /* AppIcons */,
 				A3A96EE71FC46CDD00C381B5 /* Audio Samples */,
 				A3E0DAF71FBC8D82003E68A5 /* Supporting Files */,
@@ -326,6 +333,16 @@
 				A3E0DB2B1FBDD3D9003E68A5 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3E7008C1FDA0FE1003EE684 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A3E700881FDA0FDD003EE684 /* Play_Button.png */,
+				A3E700891FDA0FDD003EE684 /* Stop_Button.png */,
+				A3E7008D1FDA1971003EE684 /* Start_Button.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +463,7 @@
 				A3244DA61FD9C0BB006D346F /* Icon-App-29x29@2x.png in Resources */,
 				A3BE44771FC87DF700324B51 /* Aminor.wav in Resources */,
 				A3BE44631FC87DF700324B51 /* Emajor.wav in Resources */,
+				A3E7008E1FDA1971003EE684 /* Start_Button.png in Resources */,
 				A3BE445F1FC87DF700324B51 /* Fminor.wav in Resources */,
 				A3244DB71FD9C52B006D346F /* Icon-App-20x20@1x.png in Resources */,
 				A3BE44651FC87DF700324B51 /* Ebminor.wav in Resources */,
@@ -461,6 +479,7 @@
 				A3BE446E1FC87DF700324B51 /* Cminor.wav in Resources */,
 				A3BE44741FC87DF700324B51 /* Bbminor.wav in Resources */,
 				A3244DA51FD9C0BB006D346F /* Icon-App-29x29@1x.png in Resources */,
+				A3E7008A1FDA0FDD003EE684 /* Play_Button.png in Resources */,
 				A3E0DB071FBC8D82003E68A5 /* LaunchScreen.storyboard in Resources */,
 				A3BE44721FC87DF700324B51 /* Bmajor.wav in Resources */,
 				A3244DA81FD9C0BB006D346F /* Icon-App-40x40@2x.png in Resources */,
@@ -477,6 +496,7 @@
 				A3244DAF1FD9C464006D346F /* Icon-App-20x20@3x.png in Resources */,
 				A3BE445A1FC87DF700324B51 /* Gmajor.wav in Resources */,
 				A3244DAB1FD9C0BB006D346F /* Icon-App-76x76@1x.png in Resources */,
+				A3E7008B1FDA0FDD003EE684 /* Stop_Button.png in Resources */,
 				A3244DA91FD9C0BB006D346F /* Icon-App-60x60@2x.png in Resources */,
 				A3BE44781FC87DF700324B51 /* Amajor.wav in Resources */,
 				A3BE44761FC87DF700324B51 /* Bbm7b5.wav in Resources */,
